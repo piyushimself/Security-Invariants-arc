@@ -1,0 +1,6 @@
+{
+  "name": "Security Invariants: 1,000+ Formal Rules for Modern Systems",
+  "description": "Master 1,000+ essential formal security invariants across 15 domains: Threat Modeling, Containers, Secure Code Review, AI/LLM Security, Web3, Cryptography, HTTP, Auth, and Cloud Infrastructure with formal logic, verification tests, and interview challenges.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
