@@ -1,0 +1,4601 @@
+[
+  {
+    "num": 1,
+    "id": "SEC-HTTP-001",
+    "title": "Dual Framing Conflict Rejection (CL + TE)",
+    "domain": "http",
+    "subdomain": "Request Smuggling & Framing",
+    "difficulty": "Intermediate",
+    "std": "RFC 9112 §6.3"
+  },
+  {
+    "num": 2,
+    "id": "SEC-HTTP-002",
+    "title": "Absolute Host Header Single-Occurrence Invariant",
+    "domain": "http",
+    "subdomain": "Host Header Attacks & Routing",
+    "difficulty": "Beginner",
+    "std": "RFC 9112 §7.1"
+  },
+  {
+    "num": 3,
+    "id": "SEC-HTTP-003",
+    "title": "HSTS Max-Age and Preload Invariant",
+    "domain": "http",
+    "subdomain": "Transport Layer & Encryption",
+    "difficulty": "Beginner",
+    "std": "RFC 6797 §6.1"
+  },
+  {
+    "num": 4,
+    "id": "SEC-HTTP-004",
+    "title": "Hop-by-Hop Header Stripping Invariant",
+    "domain": "http",
+    "subdomain": "Intermediary & Proxy Smuggling",
+    "difficulty": "Advanced",
+    "std": "RFC 9110 §7.6.1"
+  },
+  {
+    "num": 5,
+    "id": "SEC-HTTP-005",
+    "title": "CRLF Injection Header Delimiter Invariant",
+    "domain": "http",
+    "subdomain": "Response Splitting & Injection",
+    "difficulty": "Intermediate",
+    "std": "RFC 9112 §2.2"
+  },
+  {
+    "num": 6,
+    "id": "SEC-HTTP-006",
+    "title": "HTTP/2 Flow Control and Stream Multiplexing Resource Bound",
+    "domain": "http",
+    "subdomain": "Protocol DoS & Rapid Reset",
+    "difficulty": "Advanced",
+    "std": "RFC 9113 §5.1.2"
+  },
+  {
+    "num": 7,
+    "id": "SEC-HTTP-007",
+    "title": "Content-Type and Nosniff Boundary Enforcement",
+    "domain": "http",
+    "subdomain": "MIME Sniffing & XSS Mitigation",
+    "difficulty": "Beginner",
+    "std": "RFC 9110 §8.3"
+  },
+  {
+    "num": 8,
+    "id": "SEC-HTTP-008",
+    "title": "HTTP Method Whitelisting and Idempotency Guard",
+    "domain": "http",
+    "subdomain": "Method Tampering & Safe Verbs",
+    "difficulty": "Beginner",
+    "std": "RFC 9110 §9.2"
+  },
+  {
+    "num": 9,
+    "id": "SEC-HTTP-009",
+    "title": "Strict Request Header Size and Count Caps",
+    "domain": "http",
+    "subdomain": "DoS & Buffer Exhaustion",
+    "difficulty": "Intermediate",
+    "std": "RFC 9112 §2.1"
+  },
+  {
+    "num": 10,
+    "id": "SEC-HTTP-010",
+    "title": "WebSocket Handshake Origin and Subprotocol Validation",
+    "domain": "http",
+    "subdomain": "Cross-Site WebSocket Hijacking (CSWSH)",
+    "difficulty": "Advanced",
+    "std": "RFC 6455 §4.2.2"
+  },
+  {
+    "num": 11,
+    "id": "SEC-HTTP-011",
+    "title": "Early Hints (103) Information Leakage Invariant",
+    "domain": "http",
+    "subdomain": "Information Disclosure & 1xx Responses",
+    "difficulty": "Intermediate",
+    "std": "RFC 8297 §2"
+  },
+  {
+    "num": 12,
+    "id": "SEC-HTTP-012",
+    "title": "Range Request Bomb & Integer Overflow Prevention",
+    "domain": "http",
+    "subdomain": "DoS & Resource Management",
+    "difficulty": "Intermediate",
+    "std": "RFC 9110 §14.2"
+  },
+  {
+    "num": 13,
+    "id": "SEC-HTTP-013",
+    "title": "HTTP/3 0-RTT Anti-Replay Invariant",
+    "domain": "http",
+    "subdomain": "QUIC & 0-RTT Replay Attacks",
+    "difficulty": "Advanced",
+    "std": "RFC 9000 §9.2"
+  },
+  {
+    "num": 14,
+    "id": "SEC-HTTP-014",
+    "title": "Strict Content-Encoding Header Validation",
+    "domain": "http",
+    "subdomain": "Decompression Bombs & Gzip",
+    "difficulty": "Intermediate",
+    "std": "RFC 9110 §8.4"
+  },
+  {
+    "num": 15,
+    "id": "SEC-HTTP-015",
+    "title": "Cache-Control Private Enforcement for Sensitive State",
+    "domain": "http",
+    "subdomain": "Web Caching & Privacy",
+    "difficulty": "Beginner",
+    "std": "RFC 9111 §5.2"
+  },
+  {
+    "num": 16,
+    "id": "SEC-HTTP-016",
+    "title": "Clear-Site-Data Invocation on Logout Invariant",
+    "domain": "http",
+    "subdomain": "Session Teardown & Hygiene",
+    "difficulty": "Beginner",
+    "std": "W3C Clear Site Data"
+  },
+  {
+    "num": 17,
+    "id": "SEC-HTTP-017",
+    "title": "No-Transform Directive for Dynamic Content Integrity",
+    "domain": "http",
+    "subdomain": "Intermediary Tampering",
+    "difficulty": "Intermediate",
+    "std": "RFC 9111 §5.2.2"
+  },
+  {
+    "num": 18,
+    "id": "SEC-HTTP-018",
+    "title": "X-Forwarded-For Trust Boundary Sanitization",
+    "domain": "http",
+    "subdomain": "Proxy Architecture",
+    "difficulty": "Intermediate",
+    "std": "RFC 7239 §5"
+  },
+  {
+    "num": 19,
+    "id": "SEC-HTTP-019",
+    "title": "Strict-Transport-Security Never Sent Over Plain HTTP",
+    "domain": "http",
+    "subdomain": "Protocol Integrity",
+    "difficulty": "Beginner",
+    "std": "RFC 6797 §7.2"
+  },
+  {
+    "num": 20,
+    "id": "SEC-HTTP-020",
+    "title": "Cross-Origin-Opener-Policy (COOP) Process Isolation",
+    "domain": "http",
+    "subdomain": "Spectre & Process Isolation",
+    "difficulty": "Advanced",
+    "std": "HTML Living Standard §7.3"
+  },
+  {
+    "num": 21,
+    "id": "SEC-HTTP-021",
+    "title": "Cross-Origin-Embedder-Policy (COEP) Corp Separation",
+    "domain": "http",
+    "subdomain": "Spectre & Process Isolation",
+    "difficulty": "Advanced",
+    "std": "W3C COEP Spec"
+  },
+  {
+    "num": 22,
+    "id": "SEC-HTTP-022",
+    "title": "Cross-Origin-Resource-Policy (CORP) Defense Invariant",
+    "domain": "http",
+    "subdomain": "Resource Leakage",
+    "difficulty": "Intermediate",
+    "std": "W3C CORP Spec"
+  },
+  {
+    "num": 23,
+    "id": "SEC-HTTP-023",
+    "title": "ETag and Weak Validator Hash Preimage Resistance",
+    "domain": "http",
+    "subdomain": "Cache Invalidation",
+    "difficulty": "Intermediate",
+    "std": "RFC 9110 §8.8.3"
+  },
+  {
+    "num": 24,
+    "id": "SEC-HTTP-024",
+    "title": "Expect-CT and Certificate Transparency Verification",
+    "domain": "http",
+    "subdomain": "PKI Integrity",
+    "difficulty": "Intermediate",
+    "std": "RFC 9163"
+  },
+  {
+    "num": 25,
+    "id": "SEC-HTTP-025",
+    "title": "Permissions-Policy Camera and Geolocation Lockdown",
+    "domain": "http",
+    "subdomain": "Client Capability Restrictions",
+    "difficulty": "Beginner",
+    "std": "W3C Permissions Policy"
+  },
+  {
+    "num": 26,
+    "id": "SEC-HTTP-026",
+    "title": "Server Header Obfuscation and Version Stripping",
+    "domain": "http",
+    "subdomain": "Reconnaissance Mitigation",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §14.3.3"
+  },
+  {
+    "num": 27,
+    "id": "SEC-HTTP-027",
+    "title": "X-Frame-Options DENY / SAMEORIGIN Frame Protection",
+    "domain": "http",
+    "subdomain": "Clickjacking",
+    "difficulty": "Beginner",
+    "std": "RFC 7034"
+  },
+  {
+    "num": 28,
+    "id": "SEC-HTTP-028",
+    "title": "Origin Header Null Verification and Sandbox Defense",
+    "domain": "http",
+    "subdomain": "CORS & Sandboxing",
+    "difficulty": "Intermediate",
+    "std": "RFC 6454"
+  },
+  {
+    "num": 29,
+    "id": "SEC-HTTP-029",
+    "title": "HTTP/2 PUSH_PROMISE Invalidation & Elimination",
+    "domain": "http",
+    "subdomain": "Cache Poisoning & Smuggling",
+    "difficulty": "Advanced",
+    "std": "RFC 9113 §6.6"
+  },
+  {
+    "num": 30,
+    "id": "SEC-HTTP-030",
+    "title": "Referrer-Policy Strict-Origin-When-Cross-Origin",
+    "domain": "http",
+    "subdomain": "Privacy & Token Leakage",
+    "difficulty": "Beginner",
+    "std": "W3C Referrer Policy"
+  },
+  {
+    "num": 31,
+    "id": "SEC-HTTP-031",
+    "title": "Forwarded RFC 7239 Strict Header Precedence",
+    "domain": "http",
+    "subdomain": "Reverse Proxy Headers",
+    "difficulty": "Intermediate",
+    "std": "RFC 7239 §5"
+  },
+  {
+    "num": 32,
+    "id": "SEC-HTTP-032",
+    "title": "HTTP Status 401 vs 403 Semantic Strictness",
+    "domain": "http",
+    "subdomain": "Access Control Semantics",
+    "difficulty": "Beginner",
+    "std": "RFC 9110 §15.5"
+  },
+  {
+    "num": 33,
+    "id": "SEC-HTTP-033",
+    "title": "Trailer Header Boundary and TE Verification",
+    "domain": "http",
+    "subdomain": "Smuggling & Trailers",
+    "difficulty": "Advanced",
+    "std": "RFC 9112 §6.5"
+  },
+  {
+    "num": 34,
+    "id": "SEC-HTTP-034",
+    "title": "HTTP CONNECT Tunneling Port Whitelisting",
+    "domain": "http",
+    "subdomain": "Proxy Abuse & SSRF",
+    "difficulty": "Intermediate",
+    "std": "RFC 9110 §9.3.6"
+  },
+  {
+    "num": 35,
+    "id": "SEC-HTTP-035",
+    "title": "Keep-Alive Timeout Synchronization Across Tiers",
+    "domain": "http",
+    "subdomain": "Desync Smuggling",
+    "difficulty": "Advanced",
+    "std": "CWE-444"
+  },
+  {
+    "num": 36,
+    "id": "SEC-HTTP-036",
+    "title": "Content-Security-Policy-Report-Only Triage Invariant",
+    "domain": "http",
+    "subdomain": "Telemetry & Enforcement",
+    "difficulty": "Intermediate",
+    "std": "W3C CSP Level 3"
+  },
+  {
+    "num": 37,
+    "id": "SEC-WEB-001",
+    "title": "CSP Script Execution Nonce/Hash Disjunction Invariant",
+    "domain": "web",
+    "subdomain": "Content Security Policy (CSP)",
+    "difficulty": "Intermediate",
+    "std": "W3C CSP Level 3"
+  },
+  {
+    "num": 38,
+    "id": "SEC-WEB-002",
+    "title": "CORS Access-Control-Allow-Origin Wildcard with Credentials Prohibition",
+    "domain": "web",
+    "subdomain": "Cross-Origin Resource Sharing (CORS)",
+    "difficulty": "Beginner",
+    "std": "W3C CORS Specification"
+  },
+  {
+    "num": 39,
+    "id": "SEC-WEB-003",
+    "title": "Session Cookie Triple-Flag Invariant (HttpOnly + Secure + SameSite)",
+    "domain": "web",
+    "subdomain": "Cookie Security & State Management",
+    "difficulty": "Beginner",
+    "std": "RFC 6265bis §5.4"
+  },
+  {
+    "num": 40,
+    "id": "SEC-WEB-004",
+    "title": "Subresource Integrity (SRI) Hash Matching Invariant",
+    "domain": "web",
+    "subdomain": "Supply Chain & Third-Party CDNs",
+    "difficulty": "Intermediate",
+    "std": "W3C SRI Specification"
+  },
+  {
+    "num": 41,
+    "id": "SEC-WEB-005",
+    "title": "PostMessage Origin Verification Invariant",
+    "domain": "web",
+    "subdomain": "Cross-Window Messaging & Iframes",
+    "difficulty": "Intermediate",
+    "std": "HTML Living Standard §9.4.3"
+  },
+  {
+    "num": 42,
+    "id": "SEC-WEB-042",
+    "title": "DOM Clobbering Property Shadowing Invariant",
+    "domain": "web",
+    "subdomain": "DOM Security",
+    "difficulty": "Advanced",
+    "std": "W3C DOM Living Standard"
+  },
+  {
+    "num": 43,
+    "id": "SEC-WEB-043",
+    "title": "Prototype Pollution Object Freezing / Null Prototype",
+    "domain": "web",
+    "subdomain": "Client Runtime Hardening",
+    "difficulty": "Intermediate",
+    "std": "CWE-1321"
+  },
+  {
+    "num": 44,
+    "id": "SEC-WEB-044",
+    "title": "Trusted Types HTML Sink Policy Invariant",
+    "domain": "web",
+    "subdomain": "DOM XSS Prevention",
+    "difficulty": "Advanced",
+    "std": "W3C Trusted Types"
+  },
+  {
+    "num": 45,
+    "id": "SEC-WEB-045",
+    "title": "Clickjacking Frame-Ancestors CSP Enforcement",
+    "domain": "web",
+    "subdomain": "Clickjacking & Framing",
+    "difficulty": "Beginner",
+    "std": "W3C CSP Level 3"
+  },
+  {
+    "num": 46,
+    "id": "SEC-WEB-046",
+    "title": "Form-Action Restricted Submission Invariant",
+    "domain": "web",
+    "subdomain": "Form Hijacking",
+    "difficulty": "Beginner",
+    "std": "W3C CSP Level 3"
+  },
+  {
+    "num": 47,
+    "id": "SEC-WEB-047",
+    "title": "Base-URI Restriction and Tag Injection Defense",
+    "domain": "web",
+    "subdomain": "Base Tag Hijacking",
+    "difficulty": "Intermediate",
+    "std": "W3C CSP Level 3"
+  },
+  {
+    "num": 48,
+    "id": "SEC-WEB-048",
+    "title": "LocalStorage Token Storage Prohibition",
+    "domain": "web",
+    "subdomain": "Client Storage Security",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §3.5"
+  },
+  {
+    "num": 49,
+    "id": "SEC-WEB-049",
+    "title": "Cross-Window Window.Opener Nullification (noopener)",
+    "domain": "web",
+    "subdomain": "Tabnabbing & Isolation",
+    "difficulty": "Beginner",
+    "std": "HTML Living Standard"
+  },
+  {
+    "num": 50,
+    "id": "SEC-WEB-050",
+    "title": "Web Workers Origin and CSP Sandbox Bounds",
+    "domain": "web",
+    "subdomain": "Worker Isolation",
+    "difficulty": "Intermediate",
+    "std": "W3C Web Workers"
+  },
+  {
+    "num": 51,
+    "id": "SEC-WEB-051",
+    "title": "IndexedDB Object Store Key Encryption Invariant",
+    "domain": "web",
+    "subdomain": "Client Data Protection",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-88"
+  },
+  {
+    "num": 52,
+    "id": "SEC-WEB-052",
+    "title": "HTML Sanitization Context-Aware Sanitizer API",
+    "domain": "web",
+    "subdomain": "DOM XSS Defense",
+    "difficulty": "Intermediate",
+    "std": "W3C Sanitizer API"
+  },
+  {
+    "num": 53,
+    "id": "SEC-WEB-053",
+    "title": "SVG Script and External Entity Stripping Invariant",
+    "domain": "web",
+    "subdomain": "Vector Graphics Security",
+    "difficulty": "Intermediate",
+    "std": "CWE-79"
+  },
+  {
+    "num": 54,
+    "id": "SEC-WEB-054",
+    "title": "BroadcastChannel Message Origin Isolation",
+    "domain": "web",
+    "subdomain": "IPC Security",
+    "difficulty": "Intermediate",
+    "std": "W3C BroadcastChannel"
+  },
+  {
+    "num": 55,
+    "id": "SEC-WEB-055",
+    "title": "ServiceWorker Scope and Update Cache Validation",
+    "domain": "web",
+    "subdomain": "PWA & Offline Security",
+    "difficulty": "Advanced",
+    "std": "W3C Service Workers"
+  },
+  {
+    "num": 56,
+    "id": "SEC-WEB-056",
+    "title": "X-XSS-Protection Zero Mode Invariant",
+    "domain": "web",
+    "subdomain": "Browser Quirks Mitigation",
+    "difficulty": "Beginner",
+    "std": "OWASP Secure Headers"
+  },
+  {
+    "num": 57,
+    "id": "SEC-WEB-057",
+    "title": "URL Scheme Whitelist (javascript: / data: Rejection)",
+    "domain": "web",
+    "subdomain": "URI Injection",
+    "difficulty": "Beginner",
+    "std": "CWE-79"
+  },
+  {
+    "num": 58,
+    "id": "SEC-WEB-058",
+    "title": "Client-Side Path Routing Canonization (SPA Navigation)",
+    "domain": "web",
+    "subdomain": "Path Normalization",
+    "difficulty": "Intermediate",
+    "std": "CWE-22"
+  },
+  {
+    "num": 59,
+    "id": "SEC-WEB-059",
+    "title": "Session Storage Clean Lifecycle on Tab Close",
+    "domain": "web",
+    "subdomain": "Session Hygiene",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §3.4"
+  },
+  {
+    "num": 60,
+    "id": "SEC-WEB-060",
+    "title": "Web Cryptography SubtleCrypto Key Non-Extractability",
+    "domain": "web",
+    "subdomain": "Web Crypto API",
+    "difficulty": "Advanced",
+    "std": "W3C Web Crypto"
+  },
+  {
+    "num": 61,
+    "id": "SEC-WEB-061",
+    "title": "Audio/Video Media Element Crossorigin Lockdown",
+    "domain": "web",
+    "subdomain": "Media Security",
+    "difficulty": "Beginner",
+    "std": "HTML5 Media"
+  },
+  {
+    "num": 62,
+    "id": "SEC-WEB-062",
+    "title": "Iframe Sandbox Attribute Minimal Permissions",
+    "domain": "web",
+    "subdomain": "Iframe Security",
+    "difficulty": "Intermediate",
+    "std": "HTML5 Sandbox"
+  },
+  {
+    "num": 63,
+    "id": "SEC-WEB-063",
+    "title": "WebGL Context Loss and Buffer Clearing Invariant",
+    "domain": "web",
+    "subdomain": "GPU Memory Leaks",
+    "difficulty": "Advanced",
+    "std": "Khronos WebGL"
+  },
+  {
+    "num": 64,
+    "id": "SEC-WEB-064",
+    "title": "Payment Request API HTTPS and User Gesture Invariant",
+    "domain": "web",
+    "subdomain": "E-Commerce Security",
+    "difficulty": "Intermediate",
+    "std": "W3C Payment Request"
+  },
+  {
+    "num": 65,
+    "id": "SEC-WEB-065",
+    "title": "Credential Management API Silent Storage Rejection",
+    "domain": "web",
+    "subdomain": "Credential Protection",
+    "difficulty": "Intermediate",
+    "std": "W3C Credential Management"
+  },
+  {
+    "num": 66,
+    "id": "SEC-WEB-066",
+    "title": "Push Notification Payload End-to-End Encryption",
+    "domain": "web",
+    "subdomain": "Web Push Protocol",
+    "difficulty": "Advanced",
+    "std": "RFC 8291"
+  },
+  {
+    "num": 67,
+    "id": "SEC-WEB-067",
+    "title": "Battery Status / Sensor API Privacy Neutralization",
+    "domain": "web",
+    "subdomain": "Device Fingerprinting",
+    "difficulty": "Intermediate",
+    "std": "W3C Device Orientation"
+  },
+  {
+    "num": 68,
+    "id": "SEC-WEB-068",
+    "title": "Safe HTML Template String Tagging Invariant",
+    "domain": "web",
+    "subdomain": "Template Injection",
+    "difficulty": "Intermediate",
+    "std": "CWE-79"
+  },
+  {
+    "num": 69,
+    "id": "SEC-WEB-069",
+    "title": "Client Cache Eviction on Sensitive Account Transition",
+    "domain": "web",
+    "subdomain": "Cache Hygiene",
+    "difficulty": "Beginner",
+    "std": "OWASP Top 10"
+  },
+  {
+    "num": 70,
+    "id": "SEC-WEB-070",
+    "title": "Content-Disposition Attachment Header for User Downloads",
+    "domain": "web",
+    "subdomain": "Malicious Downloads",
+    "difficulty": "Beginner",
+    "std": "RFC 6266"
+  },
+  {
+    "num": 71,
+    "id": "SEC-WEB-071",
+    "title": "Sandboxed Download Protocol Lockdown (download attribute)",
+    "domain": "web",
+    "subdomain": "File Execution Defense",
+    "difficulty": "Intermediate",
+    "std": "HTML5 Downloads"
+  },
+  {
+    "num": 72,
+    "id": "SEC-WEB-072",
+    "title": "Navigation Timing API Sensitive Metric Masking",
+    "domain": "web",
+    "subdomain": "Timing Attacks",
+    "difficulty": "Advanced",
+    "std": "W3C Navigation Timing"
+  },
+  {
+    "num": 73,
+    "id": "SEC-WEB-073",
+    "title": "CSS Injection and Expression Stripping Invariant",
+    "domain": "web",
+    "subdomain": "CSS Attacks",
+    "difficulty": "Intermediate",
+    "std": "CWE-79"
+  },
+  {
+    "num": 74,
+    "id": "SEC-WEB-074",
+    "title": "Canvas ToDataURL Tainting and SOP Preservation",
+    "domain": "web",
+    "subdomain": "Canvas Fingerprinting",
+    "difficulty": "Intermediate",
+    "std": "HTML5 Canvas SOP"
+  },
+  {
+    "num": 75,
+    "id": "SEC-WEB-075",
+    "title": "WebRTC Local IP Address Masking Invariant",
+    "domain": "web",
+    "subdomain": "Privacy & Leaks",
+    "difficulty": "Intermediate",
+    "std": "RFC 8828"
+  },
+  {
+    "num": 76,
+    "id": "SEC-WEB-076",
+    "title": "Resource Timing API Allow-Origin Timing Header Check",
+    "domain": "web",
+    "subdomain": "Timing Leakage",
+    "difficulty": "Advanced",
+    "std": "W3C Resource Timing"
+  },
+  {
+    "num": 77,
+    "id": "SEC-API-001",
+    "title": "BOLA / IDOR Object-Level Ownership Invariant",
+    "domain": "api",
+    "subdomain": "Broken Object Level Authorization (BOLA)",
+    "difficulty": "Beginner",
+    "std": "OWASP API Security Top 10 API1:2023"
+  },
+  {
+    "num": 78,
+    "id": "SEC-API-002",
+    "title": "Strict Mass Assignment DTO Whitelisting Invariant",
+    "domain": "api",
+    "subdomain": "Mass Assignment & Parameter Binding",
+    "difficulty": "Beginner",
+    "std": "OWASP API Security API3:2023"
+  },
+  {
+    "num": 79,
+    "id": "SEC-API-003",
+    "title": "GraphQL Query Depth and Complexity Upper-Bound Invariant",
+    "domain": "api",
+    "subdomain": "GraphQL & DoS Mitigation",
+    "difficulty": "Intermediate",
+    "std": "OWASP GraphQL Cheat Sheet"
+  },
+  {
+    "num": 80,
+    "id": "SEC-API-004",
+    "title": "Idempotency Key Single-Execution Invariant",
+    "domain": "api",
+    "subdomain": "Payment & Mutation Concurrency",
+    "difficulty": "Intermediate",
+    "std": "IETF RFC Draft Idempotency-Key"
+  },
+  {
+    "num": 81,
+    "id": "SEC-API-081",
+    "title": "BFLA Broken Function Level Authorization Invariant",
+    "domain": "api",
+    "subdomain": "Role & Verb Privileges",
+    "difficulty": "Intermediate",
+    "std": "OWASP API5:2023"
+  },
+  {
+    "num": 82,
+    "id": "SEC-API-082",
+    "title": "Server-Side Request Forgery (SSRF) Webhook Egress Guard",
+    "domain": "api",
+    "subdomain": "SSRF & Webhooks",
+    "difficulty": "Advanced",
+    "std": "OWASP API7:2023"
+  },
+  {
+    "num": 83,
+    "id": "SEC-API-083",
+    "title": "Token Bucket Rate Limiting per Subject & IP Invariant",
+    "domain": "api",
+    "subdomain": "Rate Limiting & DoS",
+    "difficulty": "Beginner",
+    "std": "OWASP API4:2023"
+  },
+  {
+    "num": 84,
+    "id": "SEC-API-084",
+    "title": "API Gateway JSON Schema Strict Validation Invariant",
+    "domain": "api",
+    "subdomain": "Payload Validation",
+    "difficulty": "Beginner",
+    "std": "OpenAPI 3.1 Spec"
+  },
+  {
+    "num": 85,
+    "id": "SEC-API-085",
+    "title": "Shadow and Zombie API Endpoint Inventory Bound",
+    "domain": "api",
+    "subdomain": "Asset Management",
+    "difficulty": "Intermediate",
+    "std": "OWASP API9:2023"
+  },
+  {
+    "num": 86,
+    "id": "SEC-API-086",
+    "title": "Pagination Limit Upper-Bound and Offset Cap Invariant",
+    "domain": "api",
+    "subdomain": "Resource Exhaustion",
+    "difficulty": "Beginner",
+    "std": "OWASP API4:2023"
+  },
+  {
+    "num": 87,
+    "id": "SEC-API-087",
+    "title": "Internal Stack Trace Suppression in API Error Payloads",
+    "domain": "api",
+    "subdomain": "Information Disclosure",
+    "difficulty": "Beginner",
+    "std": "CWE-209"
+  },
+  {
+    "num": 88,
+    "id": "SEC-API-088",
+    "title": "API Key Entropy and Secret Revocation Verification",
+    "domain": "api",
+    "subdomain": "API Key Management",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 89,
+    "id": "SEC-API-089",
+    "title": "GraphQL Introspection Disabling in Production Environments",
+    "domain": "api",
+    "subdomain": "Reconnaissance Defense",
+    "difficulty": "Beginner",
+    "std": "OWASP GraphQL"
+  },
+  {
+    "num": 90,
+    "id": "SEC-API-090",
+    "title": "gRPC Metadata Authentication Header Invariant",
+    "domain": "api",
+    "subdomain": "gRPC Security",
+    "difficulty": "Intermediate",
+    "std": "gRPC Auth Spec"
+  },
+  {
+    "num": 91,
+    "id": "SEC-API-091",
+    "title": "RESTful URL Entity Relationship Path Validation",
+    "domain": "api",
+    "subdomain": "Path-Based Authorization",
+    "difficulty": "Intermediate",
+    "std": "OWASP API1:2023"
+  },
+  {
+    "num": 92,
+    "id": "SEC-API-092",
+    "title": "Webhook HMAC Signature Verification Invariant",
+    "domain": "api",
+    "subdomain": "Webhook Integrity",
+    "difficulty": "Intermediate",
+    "std": "RFC 2104"
+  },
+  {
+    "num": 93,
+    "id": "SEC-API-093",
+    "title": "Content-Type Negotiation Enforcement (JSON-only Accept)",
+    "domain": "api",
+    "subdomain": "Parser Exploitation",
+    "difficulty": "Beginner",
+    "std": "RFC 9110 §12.5"
+  },
+  {
+    "num": 94,
+    "id": "SEC-API-094",
+    "title": "API Version Deprecation Sunset Header Invariant",
+    "domain": "api",
+    "subdomain": "Lifecycle Management",
+    "difficulty": "Intermediate",
+    "std": "RFC 8594"
+  },
+  {
+    "num": 95,
+    "id": "SEC-API-095",
+    "title": "XML External Entity (XXE) Parser Disabling in SOAP/REST",
+    "domain": "api",
+    "subdomain": "XXE Injection",
+    "difficulty": "Intermediate",
+    "std": "CWE-611"
+  },
+  {
+    "num": 96,
+    "id": "SEC-API-096",
+    "title": "CORS Preflight Caching (Max-Age) Ceiling Invariant",
+    "domain": "api",
+    "subdomain": "CORS Latency & Security",
+    "difficulty": "Intermediate",
+    "std": "W3C Fetch"
+  },
+  {
+    "num": 97,
+    "id": "SEC-API-097",
+    "title": "Microservice Service-to-Service mTLS Mutual Authentication",
+    "domain": "api",
+    "subdomain": "Zero Trust Network",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-204"
+  },
+  {
+    "num": 98,
+    "id": "SEC-API-098",
+    "title": "API Response PII Filtering and Serialization Sanitization",
+    "domain": "api",
+    "subdomain": "Data Leakage",
+    "difficulty": "Intermediate",
+    "std": "OWASP API3:2023"
+  },
+  {
+    "num": 99,
+    "id": "SEC-API-099",
+    "title": "JWT Claims Re-Validation on High-Privilege State Mutations",
+    "domain": "api",
+    "subdomain": "Token Freshness",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 100,
+    "id": "SEC-API-100",
+    "title": "Bulk Operation Transactional Atomicity and Limit Invariant",
+    "domain": "api",
+    "subdomain": "Resource Management",
+    "difficulty": "Intermediate",
+    "std": "OWASP API4:2023"
+  },
+  {
+    "num": 101,
+    "id": "SEC-API-101",
+    "title": "Microservice Distributed Tracing Baggage Sanitization",
+    "domain": "api",
+    "subdomain": "Header Injection",
+    "difficulty": "Advanced",
+    "std": "W3C Trace Context"
+  },
+  {
+    "num": 102,
+    "id": "SEC-API-102",
+    "title": "GraphQL Batch Request (Array Query) Throttling Invariant",
+    "domain": "api",
+    "subdomain": "GraphQL DoS",
+    "difficulty": "Intermediate",
+    "std": "OWASP GraphQL"
+  },
+  {
+    "num": 103,
+    "id": "SEC-API-103",
+    "title": "API ETag Concurrency Precondition (If-Match) Enforcement",
+    "domain": "api",
+    "subdomain": "Lost Update Problem",
+    "difficulty": "Intermediate",
+    "std": "RFC 9110 §13.1.1"
+  },
+  {
+    "num": 104,
+    "id": "SEC-API-104",
+    "title": "HTTP OPTIONS Method Safe Reflection Without State Mutation",
+    "domain": "api",
+    "subdomain": "CORS Preflight",
+    "difficulty": "Beginner",
+    "std": "RFC 9110 §9.3.7"
+  },
+  {
+    "num": 105,
+    "id": "SEC-API-105",
+    "title": "API Key Extraction Isolation (Headers-Only, Never Query Strings)",
+    "domain": "api",
+    "subdomain": "Credential Leakage",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §3.1"
+  },
+  {
+    "num": 106,
+    "id": "SEC-API-106",
+    "title": "Automated OpenAPI Schema Divergence Detection Invariant",
+    "domain": "api",
+    "subdomain": "API Governance",
+    "difficulty": "Intermediate",
+    "std": "OWASP API9:2023"
+  },
+  {
+    "num": 107,
+    "id": "SEC-API-107",
+    "title": "GraphQL Field-Level Authorization Directive Invariant",
+    "domain": "api",
+    "subdomain": "GraphQL Authz",
+    "difficulty": "Advanced",
+    "std": "OWASP API1:2023"
+  },
+  {
+    "num": 108,
+    "id": "SEC-API-108",
+    "title": "Public Storage Presigned URL Expiration Ceiling (≤ 900s)",
+    "domain": "api",
+    "subdomain": "Storage Access",
+    "difficulty": "Beginner",
+    "std": "AWS S3 Best Practices"
+  },
+  {
+    "num": 109,
+    "id": "SEC-API-109",
+    "title": "JSON Web Encryption (JWE) for Sensitive PII Query Results",
+    "domain": "api",
+    "subdomain": "End-to-End Encryption",
+    "difficulty": "Advanced",
+    "std": "RFC 7516"
+  },
+  {
+    "num": 110,
+    "id": "SEC-API-110",
+    "title": "API Gateway Downstream Circuit Breaker Fault Isolation",
+    "domain": "api",
+    "subdomain": "Cascading Failures",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-160"
+  },
+  {
+    "num": 111,
+    "id": "SEC-API-111",
+    "title": "Client IP Geo-Velocity Anomaly Detection Invariant",
+    "domain": "api",
+    "subdomain": "Credential Stuffing",
+    "difficulty": "Advanced",
+    "std": "OWASP Automated Threats"
+  },
+  {
+    "num": 112,
+    "id": "SEC-API-112",
+    "title": "Strict API Subdomain Isolation (Separation from Web Origin)",
+    "domain": "api",
+    "subdomain": "Origin Isolation",
+    "difficulty": "Intermediate",
+    "std": "OWASP ASVS §14.3"
+  },
+  {
+    "num": 113,
+    "id": "SEC-AUTH-001",
+    "title": "Argon2id Memory-Hard Password Hashing Work Factor",
+    "domain": "auth",
+    "subdomain": "Credential Storage & Hashing",
+    "difficulty": "Intermediate",
+    "std": "RFC 9106"
+  },
+  {
+    "num": 114,
+    "id": "SEC-AUTH-002",
+    "title": "Constant-Time String Comparison (Anti-Timing Attack)",
+    "domain": "auth",
+    "subdomain": "Side-Channel & Timing Attacks",
+    "difficulty": "Intermediate",
+    "std": "CWE-208"
+  },
+  {
+    "num": 115,
+    "id": "SEC-AUTH-003",
+    "title": "Session Fixation Regeneration on State Transition",
+    "domain": "auth",
+    "subdomain": "Session Management",
+    "difficulty": "Beginner",
+    "std": "OWASP Top 10 A07"
+  },
+  {
+    "num": 116,
+    "id": "SEC-AUTH-116",
+    "title": "Multi-Factor Authentication (MFA) Step-Up Invariant",
+    "domain": "auth",
+    "subdomain": "MFA & Step-Up Auth",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-63B AAL2"
+  },
+  {
+    "num": 117,
+    "id": "SEC-AUTH-117",
+    "title": "FIDO2 / WebAuthn Public-Key Authenticator Binding",
+    "domain": "auth",
+    "subdomain": "Phishing-Resistant MFA",
+    "difficulty": "Advanced",
+    "std": "FIDO2 / W3C WebAuthn"
+  },
+  {
+    "num": 118,
+    "id": "SEC-AUTH-118",
+    "title": "Account Lockout Exponential Backoff / Tarpitting",
+    "domain": "auth",
+    "subdomain": "Brute-Force Protection",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §2.2"
+  },
+  {
+    "num": 119,
+    "id": "SEC-AUTH-119",
+    "title": "Credential Stuffing Breached Password Check (HaveIBeenPwned)",
+    "domain": "auth",
+    "subdomain": "Password Hygiene",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-63B §5.1.1.2"
+  },
+  {
+    "num": 120,
+    "id": "SEC-AUTH-120",
+    "title": "Universal Session Revocation (Log Out All Devices)",
+    "domain": "auth",
+    "subdomain": "Session Management",
+    "difficulty": "Intermediate",
+    "std": "OWASP ASVS §3.3.4"
+  },
+  {
+    "num": 121,
+    "id": "SEC-AUTH-121",
+    "title": "Generic Authentication Failure Message Invariant",
+    "domain": "auth",
+    "subdomain": "User Enumeration Defense",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §2.1.8"
+  },
+  {
+    "num": 122,
+    "id": "SEC-AUTH-122",
+    "title": "Password Reset Token Single-Use and Short Expiry (≤ 15m)",
+    "domain": "auth",
+    "subdomain": "Account Recovery",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 123,
+    "id": "SEC-AUTH-123",
+    "title": "TOTP Time-Step Drift Window Restriction (±1 Step)",
+    "domain": "auth",
+    "subdomain": "MFA Hardening",
+    "difficulty": "Intermediate",
+    "std": "RFC 6238"
+  },
+  {
+    "num": 124,
+    "id": "SEC-AUTH-124",
+    "title": "Remember-Me Token Re-Authentication Invariant",
+    "domain": "auth",
+    "subdomain": "Session Hardening",
+    "difficulty": "Intermediate",
+    "std": "OWASP ASVS §3.8"
+  },
+  {
+    "num": 125,
+    "id": "SEC-AUTH-125",
+    "title": "Password Composition Arbitrary Rule Prohibition",
+    "domain": "auth",
+    "subdomain": "Password Modernization",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 126,
+    "id": "SEC-AUTH-126",
+    "title": "Cryptographic Salt Uniqueness and CSPRNG Generation",
+    "domain": "auth",
+    "subdomain": "Credential Storage",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-132"
+  },
+  {
+    "num": 127,
+    "id": "SEC-AUTH-127",
+    "title": "Bcrypt Work Factor Minimum Cost (Cost ≥ 12)",
+    "domain": "auth",
+    "subdomain": "Legacy Hash Hardening",
+    "difficulty": "Intermediate",
+    "std": "OWASP Password Storage"
+  },
+  {
+    "num": 128,
+    "id": "SEC-AUTH-128",
+    "title": "Session Inactivity Absolute Timeout Bound (Idle ≤ 15m)",
+    "domain": "auth",
+    "subdomain": "Session Expiration",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §3.3.2"
+  },
+  {
+    "num": 129,
+    "id": "SEC-AUTH-129",
+    "title": "Session Maximum Absolute Lifetime Bound (Life ≤ 12h)",
+    "domain": "auth",
+    "subdomain": "Session Expiration",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 130,
+    "id": "SEC-AUTH-130",
+    "title": "Biometric Authenticator Liveness Verification Invariant",
+    "domain": "auth",
+    "subdomain": "Biometrics",
+    "difficulty": "Advanced",
+    "std": "ISO/IEC 30107-3"
+  },
+  {
+    "num": 131,
+    "id": "SEC-AUTH-131",
+    "title": "SMS OTP Deprecation for Financial & High-Value Systems",
+    "domain": "auth",
+    "subdomain": "MFA Risk Management",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 132,
+    "id": "SEC-AUTH-132",
+    "title": "Magic Link Token One-Time Consumption and Invalidation",
+    "domain": "auth",
+    "subdomain": "Passwordless Auth",
+    "difficulty": "Intermediate",
+    "std": "OWASP Cheat Sheet"
+  },
+  {
+    "num": 133,
+    "id": "SEC-AUTH-133",
+    "title": "Re-Authentication Required for Sensitive Security Actions",
+    "domain": "auth",
+    "subdomain": "Step-Up Auth",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 134,
+    "id": "SEC-AUTH-134",
+    "title": "Authentication Audit Logging (Tamper-Resistant Events)",
+    "domain": "auth",
+    "subdomain": "Audit & Accountability",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-53 AU-2"
+  },
+  {
+    "num": 135,
+    "id": "SEC-AUTH-135",
+    "title": "Concurrent Session Ceiling per User Account",
+    "domain": "auth",
+    "subdomain": "Session Governance",
+    "difficulty": "Intermediate",
+    "std": "OWASP ASVS §3.3.3"
+  },
+  {
+    "num": 136,
+    "id": "SEC-AUTH-136",
+    "title": "Password Change Invalidates All Other Active Sessions",
+    "domain": "auth",
+    "subdomain": "Account Security",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §3.3.4"
+  },
+  {
+    "num": 137,
+    "id": "SEC-AUTH-137",
+    "title": "Single Sign-On (SSO) SAML Response Assertion Signature Validation",
+    "domain": "auth",
+    "subdomain": "Enterprise SSO",
+    "difficulty": "Advanced",
+    "std": "OASIS SAML 2.0"
+  },
+  {
+    "num": 138,
+    "id": "SEC-AUTH-138",
+    "title": "Email Verification Token Cryptographic Binding and Expiry",
+    "domain": "auth",
+    "subdomain": "Registration Security",
+    "difficulty": "Beginner",
+    "std": "OWASP ASVS §2.4"
+  },
+  {
+    "num": 139,
+    "id": "SEC-AUTH-139",
+    "title": "Account Recovery Primary Channel Isolation (No In-App Secrets)",
+    "domain": "auth",
+    "subdomain": "Account Recovery",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 140,
+    "id": "SEC-AUTH-140",
+    "title": "Client IP / User-Agent Session Binding Anomaly Guard",
+    "domain": "auth",
+    "subdomain": "Session Hijacking",
+    "difficulty": "Intermediate",
+    "std": "OWASP Session Management"
+  },
+  {
+    "num": 141,
+    "id": "SEC-AUTH-141",
+    "title": "Security Questions Deprecation Invariant",
+    "domain": "auth",
+    "subdomain": "Knowledge-Based Auth",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-63B §5.1.1.2"
+  },
+  {
+    "num": 142,
+    "id": "SEC-AUTH-142",
+    "title": "Brute-Force CAPTCHA / Proof-of-Work Adaptive Trigger",
+    "domain": "auth",
+    "subdomain": "Bot Mitigation",
+    "difficulty": "Intermediate",
+    "std": "OWASP Automated Threats"
+  },
+  {
+    "num": 143,
+    "id": "SEC-AUTH-143",
+    "title": "SAML XML Signature Wrapping (XSW) Exclusion",
+    "domain": "auth",
+    "subdomain": "SSO Protocol Hardening",
+    "difficulty": "Advanced",
+    "std": "OWASP SAML Security"
+  },
+  {
+    "num": 144,
+    "id": "SEC-AUTH-144",
+    "title": "SCIM User Provisioning Deprovisioning Latency SLA",
+    "domain": "auth",
+    "subdomain": "Identity Lifecycle",
+    "difficulty": "Intermediate",
+    "std": "RFC 7644"
+  },
+  {
+    "num": 145,
+    "id": "SEC-AUTH-145",
+    "title": "Hardware Security Key Attestation Certificate Verification",
+    "domain": "auth",
+    "subdomain": "Hardware Tokens",
+    "difficulty": "Advanced",
+    "std": "FIDO Alliance Specs"
+  },
+  {
+    "num": 146,
+    "id": "SEC-AUTH-146",
+    "title": "Passkey Cross-Platform Sync and Credential Vault Isolation",
+    "domain": "auth",
+    "subdomain": "Passkeys / WebAuthn",
+    "difficulty": "Advanced",
+    "std": "FIDO Passkeys"
+  },
+  {
+    "num": 147,
+    "id": "SEC-AUTH-147",
+    "title": "Emergency Break-Glass Account Multi-Custodian Requirement",
+    "domain": "auth",
+    "subdomain": "Privileged Access",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-53 AC-2"
+  },
+  {
+    "num": 148,
+    "id": "SEC-AUTH-148",
+    "title": "API Client Secret Masking in Admin Consoles and Logs",
+    "domain": "auth",
+    "subdomain": "Credential Masking",
+    "difficulty": "Beginner",
+    "std": "PCI-DSS v4.0 §8"
+  },
+  {
+    "num": 149,
+    "id": "SEC-AUTH-149",
+    "title": "Password Entropy Estimation (zxcvbn Score ≥ 3)",
+    "domain": "auth",
+    "subdomain": "Password Policy",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 150,
+    "id": "SEC-AUTH-150",
+    "title": "Authentication Service High-Availability Fail-Closed Invariant",
+    "domain": "auth",
+    "subdomain": "Resilience & Auth",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-53"
+  },
+  {
+    "num": 151,
+    "id": "SEC-AUTHZ-001",
+    "title": "Fail-Closed Authorization Default Deny Invariant",
+    "domain": "authz",
+    "subdomain": "Access Control Architecture",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-53 AC-3"
+  },
+  {
+    "num": 152,
+    "id": "SEC-AUTHZ-002",
+    "title": "Multi-Tenant Data Isolation Partition Boundary Invariant",
+    "domain": "authz",
+    "subdomain": "Tenant Isolation & SaaS Security",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-145"
+  },
+  {
+    "num": 153,
+    "id": "SEC-AUTHZ-153",
+    "title": "Separation of Policy Enforcement (PEP) and Decision (PDP)",
+    "domain": "authz",
+    "subdomain": "Architecture",
+    "difficulty": "Intermediate",
+    "std": "XACML 3.0 Spec"
+  },
+  {
+    "num": 154,
+    "id": "SEC-AUTHZ-154",
+    "title": "Horizontal Privilege Escalation (Same-Role Isolation) Invariant",
+    "domain": "authz",
+    "subdomain": "Horizontal Escalation",
+    "difficulty": "Beginner",
+    "std": "CWE-639"
+  },
+  {
+    "num": 155,
+    "id": "SEC-AUTHZ-155",
+    "title": "Vertical Privilege Escalation (Hierarchy Traversal Prevention)",
+    "domain": "authz",
+    "subdomain": "Vertical Escalation",
+    "difficulty": "Beginner",
+    "std": "CWE-269"
+  },
+  {
+    "num": 156,
+    "id": "SEC-AUTHZ-156",
+    "title": "Attribute-Based Access Control (ABAC) Environment Attribute Verification",
+    "domain": "authz",
+    "subdomain": "ABAC Systems",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-162"
+  },
+  {
+    "num": 157,
+    "id": "SEC-AUTHZ-157",
+    "title": "Relationship-Based Access Control (ReBAC) Graph Cycle Detection",
+    "domain": "authz",
+    "subdomain": "ReBAC / Zanzibar",
+    "difficulty": "Advanced",
+    "std": "Google Zanzibar Paper"
+  },
+  {
+    "num": 158,
+    "id": "SEC-AUTHZ-158",
+    "title": "Role-Based Access Control (RBAC) Role Explosion Prevention Bound",
+    "domain": "authz",
+    "subdomain": "RBAC Systems",
+    "difficulty": "Intermediate",
+    "std": "NIST RBAC Standard"
+  },
+  {
+    "num": 159,
+    "id": "SEC-AUTHZ-159",
+    "title": "Principle of Least Privilege (PoLP) Minimal Scope Allocation",
+    "domain": "authz",
+    "subdomain": "Least Privilege",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-53 AC-6"
+  },
+  {
+    "num": 160,
+    "id": "SEC-AUTHZ-160",
+    "title": "Time-Bound Temporary Privilege Grant Expiration Invariant",
+    "domain": "authz",
+    "subdomain": "JIT Privileges",
+    "difficulty": "Intermediate",
+    "std": "CIS Benchmarks"
+  },
+  {
+    "num": 161,
+    "id": "SEC-AUTHZ-161",
+    "title": "Dual Custody / Two-Person Rule for Destructive Administrative Actions",
+    "domain": "authz",
+    "subdomain": "Privileged Operations",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-53 AC-5"
+  },
+  {
+    "num": 162,
+    "id": "SEC-AUTHZ-162",
+    "title": "Row-Level Security (RLS) Session Context Invariant",
+    "domain": "authz",
+    "subdomain": "Database Authorization",
+    "difficulty": "Intermediate",
+    "std": "PostgreSQL RLS"
+  },
+  {
+    "num": 163,
+    "id": "SEC-AUTHZ-163",
+    "title": "Column-Level Permission and PII Masking Invariant",
+    "domain": "authz",
+    "subdomain": "Data Masking",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-88"
+  },
+  {
+    "num": 164,
+    "id": "SEC-AUTHZ-164",
+    "title": "Administrative Impersonation Audit Trail Invariant",
+    "domain": "authz",
+    "subdomain": "Impersonation / Support",
+    "difficulty": "Intermediate",
+    "std": "SOC 2 Trust Principles"
+  },
+  {
+    "num": 165,
+    "id": "SEC-AUTHZ-165",
+    "title": "Service Account Privilege Separation (No Human Equivalent Rights)",
+    "domain": "authz",
+    "subdomain": "Non-Human Identities",
+    "difficulty": "Intermediate",
+    "std": "CIS Benchmarks"
+  },
+  {
+    "num": 166,
+    "id": "SEC-AUTHZ-166",
+    "title": "Dynamic Contextual Access (Device Health + IP Risk)",
+    "domain": "authz",
+    "subdomain": "Zero Trust Access",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-207"
+  },
+  {
+    "num": 167,
+    "id": "SEC-AUTHZ-167",
+    "title": "Hierarchical Organizational Unit (OU) Inheritance Monotonicity",
+    "domain": "authz",
+    "subdomain": "IAM Hierarchy",
+    "difficulty": "Intermediate",
+    "std": "AWS Organizations"
+  },
+  {
+    "num": 168,
+    "id": "SEC-AUTHZ-168",
+    "title": "Privilege Revocation Instant Propagation Latency SLA (≤ 5s)",
+    "domain": "authz",
+    "subdomain": "Revocation Systems",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 169,
+    "id": "SEC-AUTHZ-169",
+    "title": "Decentralized Identifier (DID) Cryptographic Authorization Invariant",
+    "domain": "authz",
+    "subdomain": "Verifiable Credentials",
+    "difficulty": "Expert",
+    "std": "W3C DID Spec"
+  },
+  {
+    "num": 170,
+    "id": "SEC-AUTHZ-170",
+    "title": "Delegated Administrative Scope Ceiling (Delegate ≤ Delegator)",
+    "domain": "authz",
+    "subdomain": "Delegation Rules",
+    "difficulty": "Advanced",
+    "std": "CWE-272"
+  },
+  {
+    "num": 171,
+    "id": "SEC-AUTHZ-171",
+    "title": "Privileged Role Escalation Step-Up Authentication Requirement",
+    "domain": "authz",
+    "subdomain": "Step-Up Authz",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 172,
+    "id": "SEC-AUTHZ-172",
+    "title": "Feature Flag Entitlement Access Synchronization Invariant",
+    "domain": "authz",
+    "subdomain": "Entitlements & Licensing",
+    "difficulty": "Intermediate",
+    "std": "OWASP ASVS"
+  },
+  {
+    "num": 173,
+    "id": "SEC-AUTHZ-173",
+    "title": "Cross-Tenant Direct Link URL Scraping Immunity Invariant",
+    "domain": "authz",
+    "subdomain": "Deep Linking Security",
+    "difficulty": "Beginner",
+    "std": "OWASP Top 10"
+  },
+  {
+    "num": 174,
+    "id": "SEC-AUTHZ-174",
+    "title": "Immutable Audit Record on Authorization Denials (SIEM Ingestion)",
+    "domain": "authz",
+    "subdomain": "SIEM & Detection",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-92"
+  },
+  {
+    "num": 175,
+    "id": "SEC-AUTHZ-175",
+    "title": "Open Policy Agent (OPA) Rego Strict Typing and Unification Invariant",
+    "domain": "authz",
+    "subdomain": "Policy as Code",
+    "difficulty": "Advanced",
+    "std": "OPA Rego Docs"
+  },
+  {
+    "num": 176,
+    "id": "SEC-AUTHZ-176",
+    "title": "API Gateway Token Claim Validation Before PDP Dispatch",
+    "domain": "authz",
+    "subdomain": "Microservices Authz",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-204A"
+  },
+  {
+    "num": 177,
+    "id": "SEC-AUTHZ-177",
+    "title": "File System Access Control List (POSIX ACL) Minimality",
+    "domain": "authz",
+    "subdomain": "OS Authorization",
+    "difficulty": "Beginner",
+    "std": "POSIX.1e"
+  },
+  {
+    "num": 178,
+    "id": "SEC-AUTHZ-178",
+    "title": "Sudoers Configuration NOPASSWD Strict Restriction Invariant",
+    "domain": "authz",
+    "subdomain": "Host Privilege",
+    "difficulty": "Beginner",
+    "std": "CIS Linux Benchmark"
+  },
+  {
+    "num": 179,
+    "id": "SEC-AUTHZ-179",
+    "title": "Resource Lifecycle Deletion Cascade Authorization Check",
+    "domain": "authz",
+    "subdomain": "Cascading Deletes",
+    "difficulty": "Intermediate",
+    "std": "CWE-862"
+  },
+  {
+    "num": 180,
+    "id": "SEC-AUTHZ-180",
+    "title": "GraphQL Object Authorization Directive Invariant",
+    "domain": "authz",
+    "subdomain": "GraphQL Authz",
+    "difficulty": "Intermediate",
+    "std": "OWASP GraphQL"
+  },
+  {
+    "num": 181,
+    "id": "SEC-AUTHZ-181",
+    "title": "Zero Trust Microsegmentation Authorization Invariant",
+    "domain": "authz",
+    "subdomain": "Network Authz",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-207"
+  },
+  {
+    "num": 182,
+    "id": "SEC-AUTHZ-182",
+    "title": "Administrative Session Max Concurrent Idle Ceiling",
+    "domain": "authz",
+    "subdomain": "Privileged Sessions",
+    "difficulty": "Beginner",
+    "std": "CIS Benchmarks"
+  },
+  {
+    "num": 183,
+    "id": "SEC-AUTHZ-183",
+    "title": "Multi-Factor Authorization for Cryptographic Key Export",
+    "domain": "authz",
+    "subdomain": "KMS Access Control",
+    "difficulty": "Expert",
+    "std": "FIPS 140-3"
+  },
+  {
+    "num": 184,
+    "id": "SEC-AUTHZ-184",
+    "title": "Database Stored Procedure Execution Privilege Lockdown",
+    "domain": "authz",
+    "subdomain": "SQL Privileges",
+    "difficulty": "Beginner",
+    "std": "CWE-250"
+  },
+  {
+    "num": 185,
+    "id": "SEC-AUTHZ-185",
+    "title": "Autonomous Agent Tool Invocation Policy Guardrail Bound",
+    "domain": "authz",
+    "subdomain": "Agentic Permissions",
+    "difficulty": "Advanced",
+    "std": "OWASP LLM07"
+  },
+  {
+    "num": 186,
+    "id": "SEC-AUTHZ-186",
+    "title": "Emergency Break-Glass Role Usage Instant PagerDuty Alert",
+    "domain": "authz",
+    "subdomain": "Incident Response",
+    "difficulty": "Intermediate",
+    "std": "SOC 2 Trust Criteria"
+  },
+  {
+    "num": 187,
+    "id": "SEC-OAUTH-001",
+    "title": "PKCE Code Challenge S256 Mandatory Invariant",
+    "domain": "oauth",
+    "subdomain": "Authorization Code Grant & PKCE",
+    "difficulty": "Intermediate",
+    "std": "RFC 7636 §4.2"
+  },
+  {
+    "num": 188,
+    "id": "SEC-OAUTH-002",
+    "title": "Redirect URI Strict String Exact Match Invariant",
+    "domain": "oauth",
+    "subdomain": "Redirect URI Validation",
+    "difficulty": "Beginner",
+    "std": "RFC 6749 §3.1.2"
+  },
+  {
+    "num": 189,
+    "id": "SEC-OAUTH-189",
+    "title": "Single-Use Authorization Code Invalidation Invariant",
+    "domain": "oauth",
+    "subdomain": "Authorization Code Grant",
+    "difficulty": "Intermediate",
+    "std": "RFC 6749 §4.1.2"
+  },
+  {
+    "num": 190,
+    "id": "SEC-OAUTH-190",
+    "title": "State Parameter Cryptographic Binding and CSRF Prevention",
+    "domain": "oauth",
+    "subdomain": "Client CSRF Defense",
+    "difficulty": "Beginner",
+    "std": "RFC 6749 §10.12"
+  },
+  {
+    "num": 191,
+    "id": "SEC-OAUTH-191",
+    "title": "OpenID Connect Nonce Replay Elimination Invariant",
+    "domain": "oauth",
+    "subdomain": "OIDC ID Token Validation",
+    "difficulty": "Intermediate",
+    "std": "OpenID Connect Core 1.0 §3.1.2.1"
+  },
+  {
+    "num": 192,
+    "id": "SEC-OAUTH-192",
+    "title": "Access Token Audience (aud) Strict Restriction Invariant",
+    "domain": "oauth",
+    "subdomain": "JWT Token Validation",
+    "difficulty": "Intermediate",
+    "std": "RFC 7519 §4.1.3"
+  },
+  {
+    "num": 193,
+    "id": "SEC-OAUTH-193",
+    "title": "JWT alg \"none\" Header Rejection Invariant",
+    "domain": "oauth",
+    "subdomain": "Algorithm Confusion",
+    "difficulty": "Beginner",
+    "std": "RFC 8725 §3.1"
+  },
+  {
+    "num": 194,
+    "id": "SEC-OAUTH-194",
+    "title": "JWT Asymmetric Key (RS256 vs HS256) Confusion Ban",
+    "domain": "oauth",
+    "subdomain": "Signature Verification",
+    "difficulty": "Advanced",
+    "std": "RFC 8725 §3.2"
+  },
+  {
+    "num": 195,
+    "id": "SEC-OAUTH-195",
+    "title": "Demonstrating Proof-of-Possession (DPoP) Sender-Constraining",
+    "domain": "oauth",
+    "subdomain": "Sender-Constrained Tokens",
+    "difficulty": "Advanced",
+    "std": "RFC 9449"
+  },
+  {
+    "num": 196,
+    "id": "SEC-OAUTH-196",
+    "title": "Mutual-TLS (mTLS) Client Certificate Bound Access Tokens",
+    "domain": "oauth",
+    "subdomain": "Sender-Constrained Tokens",
+    "difficulty": "Advanced",
+    "std": "RFC 8705"
+  },
+  {
+    "num": 197,
+    "id": "SEC-OAUTH-197",
+    "title": "Refresh Token Rotation and Reuse Detection Invariant",
+    "domain": "oauth",
+    "subdomain": "Token Lifecycle",
+    "difficulty": "Intermediate",
+    "std": "RFC 9700 §4.14.2"
+  },
+  {
+    "num": 198,
+    "id": "SEC-OAUTH-198",
+    "title": "OAuth Implicit Grant (response_type=token) Deprecation",
+    "domain": "oauth",
+    "subdomain": "Token Security",
+    "difficulty": "Beginner",
+    "std": "RFC 9700 §2.1.2"
+  },
+  {
+    "num": 199,
+    "id": "SEC-OAUTH-199",
+    "title": "JWT Expiration (exp) Mandatory Field and Clock Skew Bound (≤ 60s)",
+    "domain": "oauth",
+    "subdomain": "Token Lifespan",
+    "difficulty": "Beginner",
+    "std": "RFC 7519 §4.1.4"
+  },
+  {
+    "num": 200,
+    "id": "SEC-OAUTH-200",
+    "title": "OIDC Discovery (.well-known/openid-configuration) TLS Enforcement",
+    "domain": "oauth",
+    "subdomain": "Federation Discovery",
+    "difficulty": "Beginner",
+    "std": "OIDC Discovery 1.0"
+  },
+  {
+    "num": 201,
+    "id": "SEC-OAUTH-201",
+    "title": "JWKS Key ID (kid) SQL/Path Injection Prevention Invariant",
+    "domain": "oauth",
+    "subdomain": "Key Discovery Hardening",
+    "difficulty": "Advanced",
+    "std": "RFC 7517"
+  },
+  {
+    "num": 202,
+    "id": "SEC-OAUTH-202",
+    "title": "Client Secret Storage in Public Clients (Mobile/SPA) Prohibition",
+    "domain": "oauth",
+    "subdomain": "Client Credentials",
+    "difficulty": "Beginner",
+    "std": "RFC 6749 §2.1"
+  },
+  {
+    "num": 203,
+    "id": "SEC-OAUTH-203",
+    "title": "Resource Owner Password Credentials (ROPC) Deprecation",
+    "domain": "oauth",
+    "subdomain": "Legacy Grants",
+    "difficulty": "Beginner",
+    "std": "RFC 9700 §2.4"
+  },
+  {
+    "num": 204,
+    "id": "SEC-OAUTH-204",
+    "title": "Token Introspection Endpoint Client Authentication Invariant",
+    "domain": "oauth",
+    "subdomain": "Token Introspection",
+    "difficulty": "Intermediate",
+    "std": "RFC 7662"
+  },
+  {
+    "num": 205,
+    "id": "SEC-OAUTH-205",
+    "title": "Token Revocation Endpoint RFC 7009 Instant Invalidation",
+    "domain": "oauth",
+    "subdomain": "Token Revocation",
+    "difficulty": "Intermediate",
+    "std": "RFC 7009"
+  },
+  {
+    "num": 206,
+    "id": "SEC-OAUTH-206",
+    "title": "Scope Downgrade / Consent Phishing Mitigation Invariant",
+    "domain": "oauth",
+    "subdomain": "Consent Architecture",
+    "difficulty": "Intermediate",
+    "std": "RFC 6749 §3.3"
+  },
+  {
+    "num": 207,
+    "id": "SEC-OAUTH-207",
+    "title": "Pushed Authorization Requests (PAR) RFC 9126 Enforcement",
+    "domain": "oauth",
+    "subdomain": "Front-Channel Hardening",
+    "difficulty": "Advanced",
+    "std": "RFC 9126"
+  },
+  {
+    "num": 208,
+    "id": "SEC-OAUTH-208",
+    "title": "Rich Authorization Requests (RAR) Fine-Grained Authorization",
+    "domain": "oauth",
+    "subdomain": "Advanced Authorization",
+    "difficulty": "Advanced",
+    "std": "RFC 9396"
+  },
+  {
+    "num": 209,
+    "id": "SEC-OAUTH-209",
+    "title": "Cross-Tenant Token Substitution Prevention (iss and aud Match)",
+    "domain": "oauth",
+    "subdomain": "Federation Security",
+    "difficulty": "Intermediate",
+    "std": "RFC 8725"
+  },
+  {
+    "num": 210,
+    "id": "SEC-OAUTH-210",
+    "title": "OIDC ID Token at_hash and c_hash Verification Invariant",
+    "domain": "oauth",
+    "subdomain": "OIDC Hybrid Flow",
+    "difficulty": "Advanced",
+    "std": "OIDC Core 1.0 §3.3.2.11"
+  },
+  {
+    "num": 211,
+    "id": "SEC-OAUTH-211",
+    "title": "OAuth 2.0 Authorization Server Metadata RFC 8414 Conformance",
+    "domain": "oauth",
+    "subdomain": "IdP Metadata",
+    "difficulty": "Intermediate",
+    "std": "RFC 8414"
+  },
+  {
+    "num": 212,
+    "id": "SEC-OAUTH-212",
+    "title": "JWT \"typ\" Header Explicit Verification (typ: \"at+jwt\")",
+    "domain": "oauth",
+    "subdomain": "Token Confusion",
+    "difficulty": "Intermediate",
+    "std": "RFC 9068"
+  },
+  {
+    "num": 213,
+    "id": "SEC-OAUTH-213",
+    "title": "JWKS Caching and Cache-Control Header Respect Invariant",
+    "domain": "oauth",
+    "subdomain": "Key Rotation Resilience",
+    "difficulty": "Intermediate",
+    "std": "RFC 7517"
+  },
+  {
+    "num": 214,
+    "id": "SEC-OAUTH-214",
+    "title": "OAuth Token Exchange RFC 8693 Subject Delegation Bounds",
+    "domain": "oauth",
+    "subdomain": "Microservices Delegation",
+    "difficulty": "Advanced",
+    "std": "RFC 8693"
+  },
+  {
+    "num": 215,
+    "id": "SEC-OAUTH-215",
+    "title": "Device Authorization Grant RFC 8628 Polling Interval Bound",
+    "domain": "oauth",
+    "subdomain": "Smart TV / CLI Auth",
+    "difficulty": "Intermediate",
+    "std": "RFC 8628"
+  },
+  {
+    "num": 216,
+    "id": "SEC-OAUTH-216",
+    "title": "OAuth Front-Channel Logout iframe CSP Isolation",
+    "domain": "oauth",
+    "subdomain": "Session Logout",
+    "difficulty": "Intermediate",
+    "std": "OIDC Front-Channel Logout"
+  },
+  {
+    "num": 217,
+    "id": "SEC-OAUTH-217",
+    "title": "Back-Channel Logout RFC 8693 Token Signature Validation",
+    "domain": "oauth",
+    "subdomain": "Session Logout",
+    "difficulty": "Advanced",
+    "std": "OIDC Back-Channel Logout"
+  },
+  {
+    "num": 218,
+    "id": "SEC-OAUTH-218",
+    "title": "Access Token Leakage via Referer Header Elimination",
+    "domain": "oauth",
+    "subdomain": "Browser Leakage",
+    "difficulty": "Beginner",
+    "std": "RFC 6749 §10.13"
+  },
+  {
+    "num": 219,
+    "id": "SEC-OAUTH-219",
+    "title": "OIDC Prompt=Consent Step-Up Invariant for Sensitive Scopes",
+    "domain": "oauth",
+    "subdomain": "Consent Verification",
+    "difficulty": "Intermediate",
+    "std": "OIDC Core 1.0"
+  },
+  {
+    "num": 220,
+    "id": "SEC-OAUTH-220",
+    "title": "Dynamic Client Registration (RFC 7591) Initial Token Requirement",
+    "domain": "oauth",
+    "subdomain": "Client Onboarding",
+    "difficulty": "Advanced",
+    "std": "RFC 7591"
+  },
+  {
+    "num": 221,
+    "id": "SEC-OAUTH-221",
+    "title": "OAuth Error Response RFC 6749 Format Conformance (No Stack Traces)",
+    "domain": "oauth",
+    "subdomain": "Error Handling",
+    "difficulty": "Beginner",
+    "std": "RFC 6749 §5.2"
+  },
+  {
+    "num": 222,
+    "id": "SEC-CRYPTO-001",
+    "title": "Authenticated Encryption with Associated Data (AEAD) Invariant",
+    "domain": "crypto",
+    "subdomain": "Symmetric Ciphers & AEAD",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-38D"
+  },
+  {
+    "num": 223,
+    "id": "SEC-CRYPTO-002",
+    "title": "Cryptographically Secure Random Number Generator (CSPRNG) Invariant",
+    "domain": "crypto",
+    "subdomain": "Randomness & Entropy",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-90A"
+  },
+  {
+    "num": 224,
+    "id": "SEC-CRYPTO-224",
+    "title": "RSA Key Length Minimum Ceiling (KeySize ≥ 2048 bits)",
+    "domain": "crypto",
+    "subdomain": "Asymmetric Cryptography",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-57 Part 1"
+  },
+  {
+    "num": 225,
+    "id": "SEC-CRYPTO-225",
+    "title": "Elliptic Curve Domain Parameter Whitelist (P-256 / Ed25519)",
+    "domain": "crypto",
+    "subdomain": "Elliptic Curve Crypto",
+    "difficulty": "Intermediate",
+    "std": "FIPS 186-5"
+  },
+  {
+    "num": 226,
+    "id": "SEC-CRYPTO-226",
+    "title": "HMAC Constant-Time Verification Invariant",
+    "domain": "crypto",
+    "subdomain": "Message Authentication",
+    "difficulty": "Intermediate",
+    "std": "RFC 2104"
+  },
+  {
+    "num": 227,
+    "id": "SEC-CRYPTO-227",
+    "title": "HKDF Cryptographic Key Derivation Function Invariant",
+    "domain": "crypto",
+    "subdomain": "Key Derivation",
+    "difficulty": "Intermediate",
+    "std": "RFC 5869"
+  },
+  {
+    "num": 228,
+    "id": "SEC-CRYPTO-228",
+    "title": "Diffie-Hellman Ephemeral (DHE / ECDHE) Forward Secrecy",
+    "domain": "crypto",
+    "subdomain": "Forward Secrecy",
+    "difficulty": "Intermediate",
+    "std": "RFC 8446"
+  },
+  {
+    "num": 229,
+    "id": "SEC-CRYPTO-229",
+    "title": "SHA-1 and MD5 Cryptographic Hash Deprecation Invariant",
+    "domain": "crypto",
+    "subdomain": "Hash Function Security",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-131A"
+  },
+  {
+    "num": 230,
+    "id": "SEC-CRYPTO-230",
+    "title": "Post-Quantum Lattice-Based Key Encapsulation (ML-KEM / Kyber)",
+    "domain": "crypto",
+    "subdomain": "Post-Quantum Crypto",
+    "difficulty": "Expert",
+    "std": "NIST FIPS 203"
+  },
+  {
+    "num": 231,
+    "id": "SEC-CRYPTO-231",
+    "title": "Post-Quantum State-Based Signature Verification (ML-DSA / Dilithium)",
+    "domain": "crypto",
+    "subdomain": "Post-Quantum Crypto",
+    "difficulty": "Expert",
+    "std": "NIST FIPS 204"
+  },
+  {
+    "num": 232,
+    "id": "SEC-CRYPTO-232",
+    "title": "GCM Nonce Bit-Length Fixed Invariant (Length(IV) = 96 bits)",
+    "domain": "crypto",
+    "subdomain": "AEAD Modes",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-38D"
+  },
+  {
+    "num": 233,
+    "id": "SEC-CRYPTO-233",
+    "title": "Cryptographic Key Zeroization from Memory After Use",
+    "domain": "crypto",
+    "subdomain": "Memory Hygiene",
+    "difficulty": "Advanced",
+    "std": "FIPS 140-3"
+  },
+  {
+    "num": 234,
+    "id": "SEC-CRYPTO-234",
+    "title": "TLS 1.3 Minimum Protocol Version Enforcement Invariant",
+    "domain": "crypto",
+    "subdomain": "Transport Security",
+    "difficulty": "Beginner",
+    "std": "RFC 8446"
+  },
+  {
+    "num": 235,
+    "id": "SEC-CRYPTO-235",
+    "title": "PKCS#1 v1.5 Padding Deprecation (Enforce RSA-OAEP / RSA-PSS)",
+    "domain": "crypto",
+    "subdomain": "Padding Oracles",
+    "difficulty": "Intermediate",
+    "std": "RFC 8017"
+  },
+  {
+    "num": 236,
+    "id": "SEC-CRYPTO-236",
+    "title": "Cryptographic Salt Length Minimum Bound (≥ 128 bits)",
+    "domain": "crypto",
+    "subdomain": "Salt Security",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-132"
+  },
+  {
+    "num": 237,
+    "id": "SEC-CRYPTO-237",
+    "title": "Hardware Security Module (HSM) FIPS 140-3 Level 3 Root of Trust",
+    "domain": "crypto",
+    "subdomain": "Key Storage",
+    "difficulty": "Advanced",
+    "std": "FIPS 140-3"
+  },
+  {
+    "num": 238,
+    "id": "SEC-CRYPTO-238",
+    "title": "Automated Cryptographic Key Rotation Period Ceiling (≤ 365 Days)",
+    "domain": "crypto",
+    "subdomain": "Key Management",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-57"
+  },
+  {
+    "num": 239,
+    "id": "SEC-CRYPTO-239",
+    "title": "Key Encryption Key (KEK) and Data Encryption Key (DEK) Separation",
+    "domain": "crypto",
+    "subdomain": "Envelope Encryption",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-57"
+  },
+  {
+    "num": 240,
+    "id": "SEC-CRYPTO-240",
+    "title": "CBC Mode IV Unpredictability / Randomness Invariant",
+    "domain": "crypto",
+    "subdomain": "Block Ciphers",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-38A"
+  },
+  {
+    "num": 241,
+    "id": "SEC-CRYPTO-241",
+    "title": "Certificate Authority Revocation Checking (OCSP Stapling / CRL)",
+    "domain": "crypto",
+    "subdomain": "PKI Revocation",
+    "difficulty": "Intermediate",
+    "std": "RFC 6960"
+  },
+  {
+    "num": 242,
+    "id": "SEC-CRYPTO-242",
+    "title": "X.509 Subject Alternative Name (SAN) Strict Matching Invariant",
+    "domain": "crypto",
+    "subdomain": "PKI Certificate Matching",
+    "difficulty": "Beginner",
+    "std": "RFC 6125"
+  },
+  {
+    "num": 243,
+    "id": "SEC-CRYPTO-243",
+    "title": "ECDSA Random k-Value Reuse and Deterministic RFC 6979 Invariant",
+    "domain": "crypto",
+    "subdomain": "Signature Nonces",
+    "difficulty": "Advanced",
+    "std": "RFC 6979"
+  },
+  {
+    "num": 244,
+    "id": "SEC-CRYPTO-244",
+    "title": "Cipher Suite Forward Secrecy Preference Ordering",
+    "domain": "crypto",
+    "subdomain": "TLS Configuration",
+    "difficulty": "Intermediate",
+    "std": "Mozilla SSL Config"
+  },
+  {
+    "num": 245,
+    "id": "SEC-CRYPTO-245",
+    "title": "Cryptographic Hardcoded Secrets Static Analysis Ban",
+    "domain": "crypto",
+    "subdomain": "Static Analysis",
+    "difficulty": "Beginner",
+    "std": "CWE-798"
+  },
+  {
+    "num": 246,
+    "id": "SEC-CRYPTO-246",
+    "title": "Timing-Safe Modulo Reduction in RSA Decryption",
+    "domain": "crypto",
+    "subdomain": "Side-Channel Resistance",
+    "difficulty": "Expert",
+    "std": "Bleichenbacher Countermeasures"
+  },
+  {
+    "num": 247,
+    "id": "SEC-CRYPTO-247",
+    "title": "PBKDF2 Iteration Minimum Threshold (Iterations ≥ 600,000)",
+    "domain": "crypto",
+    "subdomain": "Password Storage",
+    "difficulty": "Intermediate",
+    "std": "OWASP Password Storage"
+  },
+  {
+    "num": 248,
+    "id": "SEC-CRYPTO-248",
+    "title": "Diffie-Hellman Prime Size Minimum (p ≥ 2048 bits)",
+    "domain": "crypto",
+    "subdomain": "Logjam Defense",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-56A"
+  },
+  {
+    "num": 249,
+    "id": "SEC-CRYPTO-249",
+    "title": "TLS Session Ticket Key (STEK) Frequent Rotation Invariant",
+    "domain": "crypto",
+    "subdomain": "Forward Secrecy",
+    "difficulty": "Advanced",
+    "std": "RFC 5077"
+  },
+  {
+    "num": 250,
+    "id": "SEC-CRYPTO-250",
+    "title": "Cryptographic Algorithm Agility and Abstraction Invariant",
+    "domain": "crypto",
+    "subdomain": "System Architecture",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-131A"
+  },
+  {
+    "num": 251,
+    "id": "SEC-CRYPTO-251",
+    "title": "ChaCha20-Poly1305 Nonce Counter Increment Invariant",
+    "domain": "crypto",
+    "subdomain": "Stream Ciphers",
+    "difficulty": "Intermediate",
+    "std": "RFC 8439"
+  },
+  {
+    "num": 252,
+    "id": "SEC-CRYPTO-252",
+    "title": "Cryptographic Nonce Cache for Replay Attack Prevention",
+    "domain": "crypto",
+    "subdomain": "Protocol Integrity",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-63B"
+  },
+  {
+    "num": 253,
+    "id": "SEC-CRYPTO-253",
+    "title": "Private Key Permissions Lockdown (chmod 0400 / 0600)",
+    "domain": "crypto",
+    "subdomain": "File Permissions",
+    "difficulty": "Beginner",
+    "std": "CIS Benchmarks"
+  },
+  {
+    "num": 254,
+    "id": "SEC-CRYPTO-254",
+    "title": "Encrypted-Then-MAC (EtM) Construction for Legacy Block Ciphers",
+    "domain": "crypto",
+    "subdomain": "Cipher Composition",
+    "difficulty": "Intermediate",
+    "std": "RFC 7366"
+  },
+  {
+    "num": 255,
+    "id": "SEC-CRYPTO-255",
+    "title": "Zero-Knowledge Proof (ZKP) Soundness and Completeness Bound",
+    "domain": "crypto",
+    "subdomain": "ZKP Cryptography",
+    "difficulty": "Expert",
+    "std": "zk-SNARKs Standards"
+  },
+  {
+    "num": 256,
+    "id": "SEC-CRYPTO-256",
+    "title": "Homomorphic Encryption Parameter Drift and Noise Budget Bound",
+    "domain": "crypto",
+    "subdomain": "Advanced Cryptography",
+    "difficulty": "Expert",
+    "std": "HomomorphicEncryption.org"
+  },
+  {
+    "num": 257,
+    "id": "SEC-CRYPTO-257",
+    "title": "Public Key Certificate Expiration Lifetime Ceiling (≤ 398 Days)",
+    "domain": "crypto",
+    "subdomain": "PKI Lifespan",
+    "difficulty": "Beginner",
+    "std": "CA/Browser Forum"
+  },
+  {
+    "num": 258,
+    "id": "SEC-CRYPTO-258",
+    "title": "Cryptographic Weak Curve Rejection (Small Subgroup Attacks)",
+    "domain": "crypto",
+    "subdomain": "ECC Validation",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-56A"
+  },
+  {
+    "num": 259,
+    "id": "SEC-CRYPTO-259",
+    "title": "Encrypted Search Blind Index Salted HMAC Invariant",
+    "domain": "crypto",
+    "subdomain": "Searchable Encryption",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-38F"
+  },
+  {
+    "num": 260,
+    "id": "SEC-CLOUD-001",
+    "title": "IMDSv2 Session Token Mandatory Enforcement Invariant",
+    "domain": "cloud",
+    "subdomain": "Instance Metadata & SSRF",
+    "difficulty": "Intermediate",
+    "std": "CIS AWS Benchmark §5.2"
+  },
+  {
+    "num": 261,
+    "id": "SEC-CLOUD-002",
+    "title": "Cloud Storage Public Access Block and Bucket Policy Lock",
+    "domain": "cloud",
+    "subdomain": "Object Storage & Data Exposure",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §2.1.5"
+  },
+  {
+    "num": 262,
+    "id": "SEC-CLOUD-262",
+    "title": "KMS Customer Managed Key (CMK) Envelope Encryption Invariant",
+    "domain": "cloud",
+    "subdomain": "Encryption at Rest",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-57"
+  },
+  {
+    "num": 263,
+    "id": "SEC-CLOUD-263",
+    "title": "Cross-Account IAM AssumeRole ExternalId Invariant",
+    "domain": "cloud",
+    "subdomain": "Confused Deputy Defense",
+    "difficulty": "Advanced",
+    "std": "AWS Security Best Practices"
+  },
+  {
+    "num": 264,
+    "id": "SEC-CLOUD-264",
+    "title": "Cloud Audit Trail (CloudTrail/CloudAudit) Multi-Region Immutability",
+    "domain": "cloud",
+    "subdomain": "Audit Logging",
+    "difficulty": "Beginner",
+    "std": "CIS Benchmark §3.1"
+  },
+  {
+    "num": 265,
+    "id": "SEC-CLOUD-265",
+    "title": "Virtual Private Cloud (VPC) Egress Filtering Default Deny",
+    "domain": "cloud",
+    "subdomain": "Network Egress Control",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-204"
+  },
+  {
+    "num": 266,
+    "id": "SEC-CLOUD-266",
+    "title": "Secrets Manager Dynamic Credential Rotation SLA (≤ 30 Days)",
+    "domain": "cloud",
+    "subdomain": "Secret Management",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-53"
+  },
+  {
+    "num": 267,
+    "id": "SEC-CLOUD-267",
+    "title": "Infrastructure as Code (IaC) Drift Detection and Automated Remediation",
+    "domain": "cloud",
+    "subdomain": "Cloud Governance",
+    "difficulty": "Intermediate",
+    "std": "SOC 2 Trust Criteria"
+  },
+  {
+    "num": 268,
+    "id": "SEC-CLOUD-268",
+    "title": "Identity-Aware Proxy (IAP) Contextual Access Invariant",
+    "domain": "cloud",
+    "subdomain": "Zero Trust Remote Access",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-207"
+  },
+  {
+    "num": 269,
+    "id": "SEC-CLOUD-269",
+    "title": "Cloud Firewall Ingress 0.0.0.0/0 on Port 22/3389 Prohibition",
+    "domain": "cloud",
+    "subdomain": "Network Perimeter",
+    "difficulty": "Beginner",
+    "std": "CIS Benchmarks §4.1"
+  },
+  {
+    "num": 270,
+    "id": "SEC-CLOUD-270",
+    "title": "Serverless Function Execution Role Privilege Minimality",
+    "domain": "cloud",
+    "subdomain": "Serverless Security",
+    "difficulty": "Intermediate",
+    "std": "OWASP Serverless Top 10"
+  },
+  {
+    "num": 271,
+    "id": "SEC-CLOUD-271",
+    "title": "Cloud Storage Bucket Versioning and Object Lock (WORM)",
+    "domain": "cloud",
+    "subdomain": "Ransomware Defense",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-53"
+  },
+  {
+    "num": 272,
+    "id": "SEC-CLOUD-272",
+    "title": "Container Registry Vulnerability Scanning Before Deployment",
+    "domain": "cloud",
+    "subdomain": "Supply Chain",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-190"
+  },
+  {
+    "num": 273,
+    "id": "SEC-CLOUD-273",
+    "title": "Automated Cloud Security Posture Management (CSPM) Compliance Check",
+    "domain": "cloud",
+    "subdomain": "Cloud Posture",
+    "difficulty": "Intermediate",
+    "std": "CIS Cloud Benchmarks"
+  },
+  {
+    "num": 274,
+    "id": "SEC-CLOUD-274",
+    "title": "VPC Peering DNS Resolution and Route Table Isolation",
+    "domain": "cloud",
+    "subdomain": "Network Isolation",
+    "difficulty": "Intermediate",
+    "std": "AWS VPC Guidelines"
+  },
+  {
+    "num": 275,
+    "id": "SEC-CLOUD-275",
+    "title": "Cloud Log Tamper-Resistance (Log File Validation Enabled)",
+    "domain": "cloud",
+    "subdomain": "Log Integrity",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-92"
+  },
+  {
+    "num": 276,
+    "id": "SEC-CLOUD-276",
+    "title": "Service Control Policy (SCP) Account-Level Guardrail Bound",
+    "domain": "cloud",
+    "subdomain": "Multi-Account Governance",
+    "difficulty": "Advanced",
+    "std": "AWS Organizations"
+  },
+  {
+    "num": 277,
+    "id": "SEC-CLOUD-277",
+    "title": "Automated Orphaned Resource / Unattached Volume Erasure",
+    "domain": "cloud",
+    "subdomain": "Data Remanence",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-88"
+  },
+  {
+    "num": 278,
+    "id": "SEC-CLOUD-278",
+    "title": "Cloud WAF Rate-Limiting and OWASP Core Rule Set Integration",
+    "domain": "cloud",
+    "subdomain": "Edge Protection",
+    "difficulty": "Beginner",
+    "std": "OWASP ModSecurity CRS"
+  },
+  {
+    "num": 279,
+    "id": "SEC-CLOUD-279",
+    "title": "Multi-Factor Authentication on Root / Break-Glass Account Mandatory",
+    "domain": "cloud",
+    "subdomain": "Account Root Security",
+    "difficulty": "Beginner",
+    "std": "CIS Benchmarks §1.1"
+  },
+  {
+    "num": 280,
+    "id": "SEC-CLOUD-280",
+    "title": "EBS Volume Default Encryption with KMS Invariant",
+    "domain": "cloud",
+    "subdomain": "Storage Encryption",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §2.2"
+  },
+  {
+    "num": 281,
+    "id": "SEC-CLOUD-281",
+    "title": "Cloud Database Automated Backup Retention and Snapshot Encryption",
+    "domain": "cloud",
+    "subdomain": "Disaster Recovery",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-53 CP-9"
+  },
+  {
+    "num": 282,
+    "id": "SEC-CLOUD-282",
+    "title": "Private Link / Private Service Connect for Cloud Services",
+    "domain": "cloud",
+    "subdomain": "Data Exfiltration Defense",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-204"
+  },
+  {
+    "num": 283,
+    "id": "SEC-CLOUD-283",
+    "title": "Cloud Billing Alarm Threshold Anomaly Trigger Invariant",
+    "domain": "cloud",
+    "subdomain": "Denial of Wallet Defense",
+    "difficulty": "Beginner",
+    "std": "FinOps Security"
+  },
+  {
+    "num": 284,
+    "id": "SEC-CLOUD-284",
+    "title": "Managed Identity Over Static Service Account Keys Invariant",
+    "domain": "cloud",
+    "subdomain": "Identity Federation",
+    "difficulty": "Intermediate",
+    "std": "Google Cloud Best Practices"
+  },
+  {
+    "num": 285,
+    "id": "SEC-CLOUD-285",
+    "title": "Compute Instance Auto-Recovery Health Check Invariant",
+    "domain": "cloud",
+    "subdomain": "Availability & Resilience",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-160"
+  },
+  {
+    "num": 286,
+    "id": "SEC-CLOUD-286",
+    "title": "Zero Trust Workload Identity Federation (GitHub Actions to Cloud)",
+    "domain": "cloud",
+    "subdomain": "CI/CD Cloud Access",
+    "difficulty": "Intermediate",
+    "std": "OIDC Cloud Federation"
+  },
+  {
+    "num": 287,
+    "id": "SEC-CLOUD-287",
+    "title": "Cloud Storage CORS Strict Origin Limitation Invariant",
+    "domain": "cloud",
+    "subdomain": "Storage CORS",
+    "difficulty": "Intermediate",
+    "std": "W3C CORS"
+  },
+  {
+    "num": 288,
+    "id": "SEC-CLOUD-288",
+    "title": "VPC Flow Logs Ingestion to Central SIEM Analytics Invariant",
+    "domain": "cloud",
+    "subdomain": "Network Telemetry",
+    "difficulty": "Intermediate",
+    "std": "CIS Benchmark §3.9"
+  },
+  {
+    "num": 289,
+    "id": "SEC-CLOUD-289",
+    "title": "Cloud API Rate Throttling and Quota Breach Alarm Invariant",
+    "domain": "cloud",
+    "subdomain": "API Abuse Defense",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-53"
+  },
+  {
+    "num": 290,
+    "id": "SEC-CLOUD-290",
+    "title": "Multi-Region High Availability Active-Passive Failover Bound",
+    "domain": "cloud",
+    "subdomain": "Business Continuity",
+    "difficulty": "Advanced",
+    "std": "ISO 22301"
+  },
+  {
+    "num": 291,
+    "id": "SEC-CLOUD-291",
+    "title": "Resource Tagging Enforced Ownership and Data Classification Schema",
+    "domain": "cloud",
+    "subdomain": "Resource Governance",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-53"
+  },
+  {
+    "num": 292,
+    "id": "SEC-CLOUD-292",
+    "title": "DNSSEC Validation on Cloud Managed DNS Zones Invariant",
+    "domain": "cloud",
+    "subdomain": "DNS Integrity",
+    "difficulty": "Intermediate",
+    "std": "RFC 4033"
+  },
+  {
+    "num": 293,
+    "id": "SEC-CLOUD-293",
+    "title": "Cloud Database SSL/TLS Connection Enforcement Invariant",
+    "domain": "cloud",
+    "subdomain": "In-Transit Encryption",
+    "difficulty": "Beginner",
+    "std": "PCI-DSS §4.1"
+  },
+  {
+    "num": 294,
+    "id": "SEC-CLOUD-294",
+    "title": "Cloud Storage Bucket Lifecycle Transition and Purge SLA",
+    "domain": "cloud",
+    "subdomain": "Data Minimization",
+    "difficulty": "Beginner",
+    "std": "GDPR Article 5"
+  },
+  {
+    "num": 295,
+    "id": "SEC-AWS-001",
+    "title": "IAM Action and Resource Wildcard Ban (Anti-Star Invariant)",
+    "domain": "aws",
+    "subdomain": "Identity & Access Management (IAM)",
+    "difficulty": "Intermediate",
+    "std": "CIS AWS Benchmark §1.16"
+  },
+  {
+    "num": 296,
+    "id": "SEC-AWS-002",
+    "title": "Security Group Ingress Port Restriction (No 0.0.0.0/0 on Admin Ports)",
+    "domain": "aws",
+    "subdomain": "VPC Security Groups & Network Perimeter",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §4.1"
+  },
+  {
+    "num": 297,
+    "id": "SEC-AWS-297",
+    "title": "AWS CloudTrail Multi-Region Trail with Log File Validation",
+    "domain": "aws",
+    "subdomain": "Audit Logging",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §3.1"
+  },
+  {
+    "num": 298,
+    "id": "SEC-AWS-298",
+    "title": "AWS GuardDuty Automated Threat Detection Enablement",
+    "domain": "aws",
+    "subdomain": "Threat Detection",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §3.11"
+  },
+  {
+    "num": 299,
+    "id": "SEC-AWS-299",
+    "title": "AWS KMS Key Policy Least Privilege Principal Enforcement",
+    "domain": "aws",
+    "subdomain": "Key Security",
+    "difficulty": "Intermediate",
+    "std": "AWS KMS Best Practices"
+  },
+  {
+    "num": 300,
+    "id": "SEC-AWS-300",
+    "title": "AWS Lambda Execution Role Isolation (One Role Per Function)",
+    "domain": "aws",
+    "subdomain": "Serverless Security",
+    "difficulty": "Intermediate",
+    "std": "AWS Serverless Lens"
+  },
+  {
+    "num": 301,
+    "id": "SEC-AWS-301",
+    "title": "AWS Config Continuous Evaluation & Auto-Remediation Invariant",
+    "domain": "aws",
+    "subdomain": "Compliance as Code",
+    "difficulty": "Intermediate",
+    "std": "CIS AWS Benchmark §3.5"
+  },
+  {
+    "num": 302,
+    "id": "SEC-AWS-302",
+    "title": "AWS Organizations Service Control Policy (SCP) Full-Control Root Guard",
+    "domain": "aws",
+    "subdomain": "Multi-Account Security",
+    "difficulty": "Advanced",
+    "std": "AWS Organizations Spec"
+  },
+  {
+    "num": 303,
+    "id": "SEC-AWS-303",
+    "title": "AWS IAM Credentials Rotation Period Ceiling (Access Keys ≤ 90 Days)",
+    "domain": "aws",
+    "subdomain": "Credential Hygiene",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §1.14"
+  },
+  {
+    "num": 304,
+    "id": "SEC-AWS-304",
+    "title": "AWS IAM Root Account Access Key Non-Existence Invariant",
+    "domain": "aws",
+    "subdomain": "Root Account Hardening",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §1.4"
+  },
+  {
+    "num": 305,
+    "id": "SEC-AWS-305",
+    "title": "AWS WAF Associated with All Public Application Load Balancers",
+    "domain": "aws",
+    "subdomain": "Edge Protection",
+    "difficulty": "Beginner",
+    "std": "AWS WAF Best Practices"
+  },
+  {
+    "num": 306,
+    "id": "SEC-AWS-306",
+    "title": "AWS RDS Database Instance Non-Publicly-Accessible Invariant",
+    "domain": "aws",
+    "subdomain": "Database Perimeter",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §2.3.1"
+  },
+  {
+    "num": 307,
+    "id": "SEC-AWS-307",
+    "title": "AWS Secrets Manager KMS Customer-Managed Key Encryption",
+    "domain": "aws",
+    "subdomain": "Secrets Storage",
+    "difficulty": "Intermediate",
+    "std": "AWS Secrets Manager"
+  },
+  {
+    "num": 308,
+    "id": "SEC-AWS-308",
+    "title": "AWS IAM Permission Boundary Enforcement for Delegated Admins",
+    "domain": "aws",
+    "subdomain": "Privilege Boundaries",
+    "difficulty": "Advanced",
+    "std": "AWS IAM Documentation"
+  },
+  {
+    "num": 309,
+    "id": "SEC-AWS-309",
+    "title": "AWS CloudWatch Alarms for Unauthorized API Calls Invariant",
+    "domain": "aws",
+    "subdomain": "Alarming & Monitoring",
+    "difficulty": "Intermediate",
+    "std": "CIS AWS Benchmark §3.1"
+  },
+  {
+    "num": 310,
+    "id": "SEC-AWS-310",
+    "title": "AWS Macie Sensitive Data PII Discovery on S3 Buckets",
+    "domain": "aws",
+    "subdomain": "Data Loss Prevention",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-88"
+  },
+  {
+    "num": 311,
+    "id": "SEC-AWS-311",
+    "title": "AWS Network Firewall / Inspection VPC Transit Gateway Invariant",
+    "domain": "aws",
+    "subdomain": "Network Architecture",
+    "difficulty": "Advanced",
+    "std": "AWS Architecture Center"
+  },
+  {
+    "num": 312,
+    "id": "SEC-AWS-312",
+    "title": "AWS Inspector Automated Vulnerability Scanning on EC2 and ECR",
+    "domain": "aws",
+    "subdomain": "Vulnerability Management",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-40"
+  },
+  {
+    "num": 313,
+    "id": "SEC-AWS-313",
+    "title": "AWS IAM Role Session Duration Upper Bound (Duration ≤ 1h for Admins)",
+    "domain": "aws",
+    "subdomain": "Session Hardening",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §1.20"
+  },
+  {
+    "num": 314,
+    "id": "SEC-AWS-314",
+    "title": "AWS Security Hub Standard Security Compliance Score Threshold (≥ 90%)",
+    "domain": "aws",
+    "subdomain": "Security Governance",
+    "difficulty": "Intermediate",
+    "std": "AWS Security Hub"
+  },
+  {
+    "num": 315,
+    "id": "SEC-AWS-315",
+    "title": "AWS EBS Snapshots Non-Public Sharing Invariant",
+    "domain": "aws",
+    "subdomain": "Snapshot Leakage",
+    "difficulty": "Beginner",
+    "std": "AWS CIS Benchmark"
+  },
+  {
+    "num": 316,
+    "id": "SEC-AWS-316",
+    "title": "AWS API Gateway Mutual TLS (mTLS) Inbound Certificate Check",
+    "domain": "aws",
+    "subdomain": "API Transport",
+    "difficulty": "Advanced",
+    "std": "RFC 8705"
+  },
+  {
+    "num": 317,
+    "id": "SEC-AWS-317",
+    "title": "AWS ECS Fargate Task Ephemeral Storage Encryption Invariant",
+    "domain": "aws",
+    "subdomain": "Container Security",
+    "difficulty": "Intermediate",
+    "std": "AWS ECS Best Practices"
+  },
+  {
+    "num": 318,
+    "id": "SEC-AWS-318",
+    "title": "AWS VPC Flow Logs CloudWatch Destination Retention Bound (≥ 90 Days)",
+    "domain": "aws",
+    "subdomain": "Telemetry Retention",
+    "difficulty": "Beginner",
+    "std": "CIS AWS Benchmark §3.9"
+  },
+  {
+    "num": 319,
+    "id": "SEC-AWS-319",
+    "title": "AWS ELB HTTPS Listener Security Policy (TLS 1.2+ Only)",
+    "domain": "aws",
+    "subdomain": "TLS Configuration",
+    "difficulty": "Beginner",
+    "std": "AWS ELB Best Practices"
+  },
+  {
+    "num": 320,
+    "id": "SEC-AWS-320",
+    "title": "AWS DynamoDB Point-In-Time Recovery (PITR) Enablement",
+    "domain": "aws",
+    "subdomain": "Disaster Recovery",
+    "difficulty": "Beginner",
+    "std": "AWS Well-Architected"
+  },
+  {
+    "num": 321,
+    "id": "SEC-AWS-321",
+    "title": "AWS Redshift Cluster Audit Logging & KMS Encryption Invariant",
+    "domain": "aws",
+    "subdomain": "Data Warehouse Security",
+    "difficulty": "Intermediate",
+    "std": "AWS Redshift Guide"
+  },
+  {
+    "num": 322,
+    "id": "SEC-AWS-322",
+    "title": "AWS OpenSearch Service Fine-Grained Access Control & Node-to-Node TLS",
+    "domain": "aws",
+    "subdomain": "Search Cluster Security",
+    "difficulty": "Intermediate",
+    "std": "AWS OpenSearch Docs"
+  },
+  {
+    "num": 323,
+    "id": "SEC-AWS-323",
+    "title": "AWS CloudFormation Stack Termination Protection on Production",
+    "domain": "aws",
+    "subdomain": "Operational Resilience",
+    "difficulty": "Beginner",
+    "std": "AWS CloudFormation"
+  },
+  {
+    "num": 324,
+    "id": "SEC-AWS-324",
+    "title": "AWS Shield Advanced Automatic DDoS Mitigation Enablement",
+    "domain": "aws",
+    "subdomain": "DDoS Defense",
+    "difficulty": "Advanced",
+    "std": "AWS Shield Best Practices"
+  },
+  {
+    "num": 325,
+    "id": "SEC-AWS-325",
+    "title": "AWS Lambda Environment Variable Encryption with KMS",
+    "domain": "aws",
+    "subdomain": "Secret Management",
+    "difficulty": "Intermediate",
+    "std": "AWS Lambda Docs"
+  },
+  {
+    "num": 326,
+    "id": "SEC-AWS-326",
+    "title": "AWS IAM MFA Delete on S3 Buckets for High-Value Backups",
+    "domain": "aws",
+    "subdomain": "Ransomware Protection",
+    "difficulty": "Intermediate",
+    "std": "AWS S3 Best Practices"
+  },
+  {
+    "num": 327,
+    "id": "SEC-AWS-327",
+    "title": "AWS Transit Gateway Route Table Inter-VPC Segmentation",
+    "domain": "aws",
+    "subdomain": "Network Microsegmentation",
+    "difficulty": "Advanced",
+    "std": "AWS TGW Security"
+  },
+  {
+    "num": 328,
+    "id": "SEC-AWS-328",
+    "title": "AWS Cognito User Pool Advanced Security Features (Risk-Based Auth)",
+    "domain": "aws",
+    "subdomain": "Customer Identity",
+    "difficulty": "Intermediate",
+    "std": "AWS Cognito Best Practices"
+  },
+  {
+    "num": 329,
+    "id": "SEC-AWS-329",
+    "title": "AWS VPC Endpoint Policies Limiting S3 Operations to Internal Org",
+    "domain": "aws",
+    "subdomain": "Data Exfiltration Defense",
+    "difficulty": "Advanced",
+    "std": "AWS PrivateLink Security"
+  },
+  {
+    "num": 330,
+    "id": "SEC-AWS-330",
+    "title": "AWS Systems Manager Patch Manager Automatic Patching Compliance SLA",
+    "domain": "aws",
+    "subdomain": "Patch Management",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-40"
+  },
+  {
+    "num": 331,
+    "id": "SEC-CONT-001",
+    "title": "Non-Root User Container Execution Invariant",
+    "domain": "containers",
+    "subdomain": "Container Runtime & Namespaces",
+    "difficulty": "Beginner",
+    "std": "CIS Docker Benchmark §4.1"
+  },
+  {
+    "num": 332,
+    "id": "SEC-CONT-002",
+    "title": "Drop All Linux Capabilities (cap-drop=ALL) Invariant",
+    "domain": "containers",
+    "subdomain": "Linux Capabilities & Kernel Isolation",
+    "difficulty": "Intermediate",
+    "std": "CIS Docker Benchmark §5.2.1"
+  },
+  {
+    "num": 333,
+    "id": "SEC-CONT-333",
+    "title": "Read-Only Root Filesystem (--read-only) Invariant",
+    "domain": "containers",
+    "subdomain": "Filesystem Immutability",
+    "difficulty": "Intermediate",
+    "std": "CIS Docker Benchmark §5.12"
+  },
+  {
+    "num": 334,
+    "id": "SEC-CONT-334",
+    "title": "Docker Socket (/var/run/docker.sock) Mount Prohibition",
+    "domain": "containers",
+    "subdomain": "Container Breakout",
+    "difficulty": "Beginner",
+    "std": "CWE-250"
+  },
+  {
+    "num": 335,
+    "id": "SEC-CONT-335",
+    "title": "Default Seccomp Profile (docker-default) Enforcement",
+    "domain": "containers",
+    "subdomain": "Syscall Filtering",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-190"
+  },
+  {
+    "num": 336,
+    "id": "SEC-CONT-336",
+    "title": "Minimal Base Images (Distroless / Scratch) Invariant",
+    "domain": "containers",
+    "subdomain": "Attack Surface Reduction",
+    "difficulty": "Beginner",
+    "std": "Google Distroless"
+  },
+  {
+    "num": 337,
+    "id": "SEC-CONT-337",
+    "title": "Container Memory and CPU cgroup Limits Mandatory Bound",
+    "domain": "containers",
+    "subdomain": "DoS & Resource Starvation",
+    "difficulty": "Beginner",
+    "std": "CIS Docker Benchmark §5.10"
+  },
+  {
+    "num": 338,
+    "id": "SEC-CONT-338",
+    "title": "No-New-Privileges Flag Enforcement (SecurityOpt: no-new-privileges)",
+    "domain": "containers",
+    "subdomain": "Privilege Escalation",
+    "difficulty": "Intermediate",
+    "std": "CIS Docker Benchmark §5.25"
+  },
+  {
+    "num": 339,
+    "id": "SEC-CONT-339",
+    "title": "Container Image Cryptographic Signature Verification (Notary / Cosign)",
+    "domain": "containers",
+    "subdomain": "Image Provenance",
+    "difficulty": "Advanced",
+    "std": "SLSA Level 3"
+  },
+  {
+    "num": 340,
+    "id": "SEC-CONT-340",
+    "title": "Software Bill of Materials (SBOM) Generation and Attestation Invariant",
+    "domain": "containers",
+    "subdomain": "Supply Chain Security",
+    "difficulty": "Intermediate",
+    "std": "Executive Order 14028"
+  },
+  {
+    "num": 341,
+    "id": "SEC-CONT-341",
+    "title": "Secrets Never Committed into Container Layers (Docker Build Secrets)",
+    "domain": "containers",
+    "subdomain": "Image Hygiene",
+    "difficulty": "Beginner",
+    "std": "CWE-798"
+  },
+  {
+    "num": 342,
+    "id": "SEC-CONT-342",
+    "title": "Multi-Stage Build Compiler Toolchain Stripping Invariant",
+    "domain": "containers",
+    "subdomain": "Attack Surface Reduction",
+    "difficulty": "Beginner",
+    "std": "Docker Best Practices"
+  },
+  {
+    "num": 343,
+    "id": "SEC-CONT-343",
+    "title": "Host IPC and PID Namespace Sharing Prohibition (hostPID=false)",
+    "domain": "containers",
+    "subdomain": "Process Isolation",
+    "difficulty": "Intermediate",
+    "std": "CIS Docker Benchmark §5.15"
+  },
+  {
+    "num": 344,
+    "id": "SEC-CONT-344",
+    "title": "Host Network Namespace Isolation (hostNetwork=false)",
+    "domain": "containers",
+    "subdomain": "Network Isolation",
+    "difficulty": "Beginner",
+    "std": "CIS Docker Benchmark §5.9"
+  },
+  {
+    "num": 345,
+    "id": "SEC-CONT-345",
+    "title": "Container Healthcheck Directive and Auto-Restart Ceiling",
+    "domain": "containers",
+    "subdomain": "Resilience",
+    "difficulty": "Beginner",
+    "std": "CIS Docker Benchmark §4.6"
+  },
+  {
+    "num": 346,
+    "id": "SEC-CONT-346",
+    "title": "PIDs Limit Bound (pids-limit) to Prevent Fork Bombs",
+    "domain": "containers",
+    "subdomain": "Process Starvation",
+    "difficulty": "Intermediate",
+    "std": "CIS Docker Benchmark §5.28"
+  },
+  {
+    "num": 347,
+    "id": "SEC-CONT-347",
+    "title": "Container Logging Driver Forwarding (syslog/fluentd/awslogs)",
+    "domain": "containers",
+    "subdomain": "Log Tampering",
+    "difficulty": "Beginner",
+    "std": "CIS Docker Benchmark §5.21"
+  },
+  {
+    "num": 348,
+    "id": "SEC-CONT-348",
+    "title": "Automated Container Base Image Patching and Rebuild SLA",
+    "domain": "containers",
+    "subdomain": "CVE Management",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-40"
+  },
+  {
+    "num": 349,
+    "id": "SEC-CONT-349",
+    "title": "Tmpfs In-Memory Mount for Ephemeral Scratch Directories",
+    "domain": "containers",
+    "subdomain": "Filesystem Hardening",
+    "difficulty": "Intermediate",
+    "std": "CIS Docker Benchmark §5.13"
+  },
+  {
+    "num": 350,
+    "id": "SEC-CONT-350",
+    "title": "Device Node Access Restriction (No --device=/dev/sda)",
+    "domain": "containers",
+    "subdomain": "Device Node Security",
+    "difficulty": "Intermediate",
+    "std": "CWE-250"
+  },
+  {
+    "num": 351,
+    "id": "SEC-CONT-351",
+    "title": "Container Core Dumps Disabling (ulimit core=0)",
+    "domain": "containers",
+    "subdomain": "Memory Dumping",
+    "difficulty": "Intermediate",
+    "std": "CIS Linux Benchmark"
+  },
+  {
+    "num": 352,
+    "id": "SEC-CONT-352",
+    "title": "AppArmor / SELinux Container Profile Enforced Confined",
+    "domain": "containers",
+    "subdomain": "Mandatory Access Control",
+    "difficulty": "Advanced",
+    "std": "CIS Docker Benchmark §5.1"
+  },
+  {
+    "num": 353,
+    "id": "SEC-CONT-353",
+    "title": "Container Registry Ephemeral Token Access Authentication",
+    "domain": "containers",
+    "subdomain": "Registry Security",
+    "difficulty": "Beginner",
+    "std": "NIST SP 800-190"
+  },
+  {
+    "num": 354,
+    "id": "SEC-CONT-354",
+    "title": "Static Binaries Strip Debug Symbols and Setuid/Setgid Bits",
+    "domain": "containers",
+    "subdomain": "Binary Hardening",
+    "difficulty": "Intermediate",
+    "std": "CIS Benchmarks"
+  },
+  {
+    "num": 355,
+    "id": "SEC-CONT-355",
+    "title": "Container Environment Variable Secret Extraction Masking",
+    "domain": "containers",
+    "subdomain": "Secrets Exposure",
+    "difficulty": "Intermediate",
+    "std": "OWASP Docker Cheat Sheet"
+  },
+  {
+    "num": 356,
+    "id": "SEC-CONT-356",
+    "title": "Container Image Tag Mutability Prohibition (Pin Immutable Digests)",
+    "domain": "containers",
+    "subdomain": "Tag Poisoning Defense",
+    "difficulty": "Intermediate",
+    "std": "SLSA Framework"
+  },
+  {
+    "num": 357,
+    "id": "SEC-CONT-357",
+    "title": "Container Runtime Ephemeral Tmpfs Size Ceiling Bound",
+    "domain": "containers",
+    "subdomain": "Resource Quotas",
+    "difficulty": "Intermediate",
+    "std": "CWE-400"
+  },
+  {
+    "num": 358,
+    "id": "SEC-CONT-358",
+    "title": "Docker Daemon TLS Mutual Authentication (TLS Verify = 1)",
+    "domain": "containers",
+    "subdomain": "Daemon Transport",
+    "difficulty": "Advanced",
+    "std": "CIS Docker Benchmark §3.1"
+  },
+  {
+    "num": 359,
+    "id": "SEC-CONT-359",
+    "title": "Live Restore Daemon Configuration for Zero-Downtime Patching",
+    "domain": "containers",
+    "subdomain": "Operational Continuity",
+    "difficulty": "Intermediate",
+    "std": "CIS Docker Benchmark §2.14"
+  },
+  {
+    "num": 360,
+    "id": "SEC-CONT-360",
+    "title": "Container Image Layer Count and Cache Poisoning Defense",
+    "domain": "containers",
+    "subdomain": "Build Security",
+    "difficulty": "Intermediate",
+    "std": "NIST SP 800-190"
+  },
+  {
+    "num": 361,
+    "id": "SEC-CONT-361",
+    "title": "Containerized Package Manager Cache Purge Post-Install (apk/apt-get)",
+    "domain": "containers",
+    "subdomain": "Image Minimization",
+    "difficulty": "Beginner",
+    "std": "Docker Security Guide"
+  },
+  {
+    "num": 362,
+    "id": "SEC-CONT-362",
+    "title": "Kernel Sysctl Parameter Lockdown (Forbidden Host Sysctls)",
+    "domain": "containers",
+    "subdomain": "Kernel Hardening",
+    "difficulty": "Advanced",
+    "std": "CIS Docker Benchmark §5.26"
+  },
+  {
+    "num": 363,
+    "id": "SEC-CONT-363",
+    "title": "Docker In Content Trust (DOCKER_CONTENT_TRUST=1) Enforcement",
+    "domain": "containers",
+    "subdomain": "Image Integrity",
+    "difficulty": "Intermediate",
+    "std": "CIS Docker Benchmark §4.5"
+  },
+  {
+    "num": 364,
+    "id": "SEC-CONT-364",
+    "title": "Container Ephemeral Storage Volume Quotas (storage-opt size=X)",
+    "domain": "containers",
+    "subdomain": "Disk Starvation",
+    "difficulty": "Intermediate",
+    "std": "CWE-400"
+  },
+  {
+    "num": 365,
+    "id": "SEC-CONT-365",
+    "title": "Container Host Auditd Rules on Docker Daemon Execution",
+    "domain": "containers",
+    "subdomain": "Host Audit Logging",
+    "difficulty": "Advanced",
+    "std": "CIS Docker Benchmark §1.1.1"
+  },
+  {
+    "num": 366,
+    "id": "SEC-K8S-001",
+    "title": "Cluster-Admin RBAC Grant Prohibition Invariant",
+    "domain": "k8s",
+    "subdomain": "Kubernetes RBAC & Cluster Security",
+    "difficulty": "Intermediate",
+    "std": "CIS Kubernetes Benchmark §5.1.1"
+  },
+  {
+    "num": 367,
+    "id": "SEC-K8S-002",
+    "title": "NetworkPolicy Default Deny Ingress and Egress Invariant",
+    "domain": "k8s",
+    "subdomain": "Network Microsegmentation & CNI",
+    "difficulty": "Intermediate",
+    "std": "CIS Kubernetes Benchmark §5.3.2"
+  },
+  {
+    "num": 368,
+    "id": "SEC-K8S-368",
+    "title": "Pod Security Standards (PSS) Restricted Mode Invariant",
+    "domain": "k8s",
+    "subdomain": "Pod Security",
+    "difficulty": "Intermediate",
+    "std": "Kubernetes PSS Spec"
+  },
+  {
+    "num": 369,
+    "id": "SEC-K8S-369",
+    "title": "AutomountServiceAccountToken Disabled Invariant (automount=false)",
+    "domain": "k8s",
+    "subdomain": "Identity & Tokens",
+    "difficulty": "Beginner",
+    "std": "CIS K8s Benchmark §5.1.6"
+  },
+  {
+    "num": 370,
+    "id": "SEC-K8S-370",
+    "title": "Secret Encryption at Rest with KMS Provider Invariant",
+    "domain": "k8s",
+    "subdomain": "Data at Rest",
+    "difficulty": "Intermediate",
+    "std": "CIS K8s Benchmark §1.2.33"
+  },
+  {
+    "num": 371,
+    "id": "SEC-K8S-371",
+    "title": "Kubernetes Admission Controller Webhook Gatekeeper / Kyverno Enforcement",
+    "domain": "k8s",
+    "subdomain": "Policy Enforcement",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-190"
+  },
+  {
+    "num": 372,
+    "id": "SEC-K8S-372",
+    "title": "etcd Key-Value Store Mutual TLS (mTLS) Encryption Invariant",
+    "domain": "k8s",
+    "subdomain": "Control Plane Security",
+    "difficulty": "Advanced",
+    "std": "CIS K8s Benchmark §2.1"
+  },
+  {
+    "num": 373,
+    "id": "SEC-K8S-373",
+    "title": "API Server Anonymous Authentication Disabled (--anonymous-auth=false)",
+    "domain": "k8s",
+    "subdomain": "API Server Hardening",
+    "difficulty": "Beginner",
+    "std": "CIS K8s Benchmark §1.2.1"
+  },
+  {
+    "num": 374,
+    "id": "SEC-K8S-374",
+    "title": "NodeRestriction Admission Plugin Enablement Invariant",
+    "domain": "k8s",
+    "subdomain": "Node Isolation",
+    "difficulty": "Intermediate",
+    "std": "CIS K8s Benchmark §1.2.17"
+  },
+  {
+    "num": 375,
+    "id": "SEC-K8S-375",
+    "title": "Kubelet Read-Only Port 10255 Disabling Invariant",
+    "domain": "k8s",
+    "subdomain": "Kubelet Security",
+    "difficulty": "Beginner",
+    "std": "CIS K8s Benchmark §4.2.4"
+  },
+  {
+    "num": 376,
+    "id": "SEC-K8S-376",
+    "title": "Kubernetes Audit Policy Metadata and RequestResponse Logging",
+    "domain": "k8s",
+    "subdomain": "Audit Logging",
+    "difficulty": "Intermediate",
+    "std": "CIS K8s Benchmark §3.2"
+  },
+  {
+    "num": 377,
+    "id": "SEC-K8S-377",
+    "title": "HostPath Volume Mount Strict Admission Prohibition",
+    "domain": "k8s",
+    "subdomain": "Storage & Breakouts",
+    "difficulty": "Intermediate",
+    "std": "Kubernetes PSS"
+  },
+  {
+    "num": 378,
+    "id": "SEC-K8S-378",
+    "title": "Privileged Container Creation Admission Webhook Ban",
+    "domain": "k8s",
+    "subdomain": "Admission Control",
+    "difficulty": "Beginner",
+    "std": "Kubernetes PSS"
+  },
+  {
+    "num": 379,
+    "id": "SEC-K8S-379",
+    "title": "SecurityContext runAsNonRoot Enforced Across All Pods",
+    "domain": "k8s",
+    "subdomain": "Pod Security",
+    "difficulty": "Beginner",
+    "std": "CIS K8s Benchmark §5.2.6"
+  },
+  {
+    "num": 380,
+    "id": "SEC-K8S-380",
+    "title": "Container HostPort Allocation Ban (Use ClusterIP/Ingress)",
+    "domain": "k8s",
+    "subdomain": "Network Hardening",
+    "difficulty": "Intermediate",
+    "std": "Kubernetes PSS"
+  },
+  {
+    "num": 381,
+    "id": "SEC-K8S-381",
+    "title": "Kubernetes Ingress Controller TLS Certificate Strict SNI Check",
+    "domain": "k8s",
+    "subdomain": "Ingress Security",
+    "difficulty": "Intermediate",
+    "std": "RFC 6066"
+  },
+  {
+    "num": 382,
+    "id": "SEC-K8S-382",
+    "title": "Tolerations and Taints for Master / Control-Plane Node Isolation",
+    "domain": "k8s",
+    "subdomain": "Scheduling Security",
+    "difficulty": "Intermediate",
+    "std": "CIS K8s Benchmark §1.4"
+  },
+  {
+    "num": 383,
+    "id": "SEC-K8S-383",
+    "title": "ServiceAccount Projected Volume Short-Lived Bound Tokens",
+    "domain": "k8s",
+    "subdomain": "Token Lifecycle",
+    "difficulty": "Intermediate",
+    "std": "K8s 1.22+ Token Projection"
+  },
+  {
+    "num": 384,
+    "id": "SEC-K8S-384",
+    "title": "Kubelet Anonymous Auth and Webhook Auth Enforcement Invariant",
+    "domain": "k8s",
+    "subdomain": "Node Security",
+    "difficulty": "Intermediate",
+    "std": "CIS K8s Benchmark §4.2.1"
+  },
+  {
+    "num": 385,
+    "id": "SEC-K8S-385",
+    "title": "ResourceQuota and LimitRange Enforced per Namespace Invariant",
+    "domain": "k8s",
+    "subdomain": "Resource Governance",
+    "difficulty": "Beginner",
+    "std": "CWE-400"
+  },
+  {
+    "num": 386,
+    "id": "SEC-K8S-386",
+    "title": "Kubernetes Dashboard Deprecation or Strict SSO Lockdown",
+    "domain": "k8s",
+    "subdomain": "Attack Surface",
+    "difficulty": "Beginner",
+    "std": "K8s Security Best Practices"
+  },
+  {
+    "num": 387,
+    "id": "SEC-K8S-387",
+    "title": "Service Mesh (Istio / Linkerd) Strict Mutual-TLS PeerAuthentication",
+    "domain": "k8s",
+    "subdomain": "Service Mesh Security",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-204A"
+  },
+  {
+    "num": 388,
+    "id": "SEC-K8S-388",
+    "title": "Cilium eBPF Host Firewall and L7 Network Policy Invariant",
+    "domain": "k8s",
+    "subdomain": "eBPF Security",
+    "difficulty": "Advanced",
+    "std": "Cilium Docs"
+  },
+  {
+    "num": 389,
+    "id": "SEC-K8S-389",
+    "title": "ImagePullSecrets Registry Authentication Scoping Invariant",
+    "domain": "k8s",
+    "subdomain": "Registry Access",
+    "difficulty": "Intermediate",
+    "std": "K8s Documentation"
+  },
+  {
+    "num": 390,
+    "id": "SEC-K8S-390",
+    "title": "Kube-Proxy IPVS / iptables State Table Synchronization Invariant",
+    "domain": "k8s",
+    "subdomain": "Networking Resilience",
+    "difficulty": "Advanced",
+    "std": "K8s Networking"
+  },
+  {
+    "num": 391,
+    "id": "SEC-K8S-391",
+    "title": "Ephemeral Containers Debugging RBAC Lockdown Invariant",
+    "domain": "k8s",
+    "subdomain": "Live Debugging",
+    "difficulty": "Intermediate",
+    "std": "K8s RBAC Docs"
+  },
+  {
+    "num": 392,
+    "id": "SEC-K8S-392",
+    "title": "Custom Resource Definition (CRD) OpenAPI Schema Validation",
+    "domain": "k8s",
+    "subdomain": "Extensibility Security",
+    "difficulty": "Intermediate",
+    "std": "K8s CRD Guide"
+  },
+  {
+    "num": 393,
+    "id": "SEC-K8S-393",
+    "title": "Container Runtime cgroup Driver systemd Alignment Invariant",
+    "domain": "k8s",
+    "subdomain": "Runtime Stability",
+    "difficulty": "Intermediate",
+    "std": "K8s Installation"
+  },
+  {
+    "num": 394,
+    "id": "SEC-K8S-394",
+    "title": "Pod Disruption Budget (PDB) High-Availability Invariant",
+    "domain": "k8s",
+    "subdomain": "Operational Continuity",
+    "difficulty": "Intermediate",
+    "std": "K8s Reliability Guide"
+  },
+  {
+    "num": 395,
+    "id": "SEC-K8S-395",
+    "title": "ServiceAccount IAM Role Binding (IRSA / Workload Identity)",
+    "domain": "k8s",
+    "subdomain": "Cloud Identity",
+    "difficulty": "Intermediate",
+    "std": "AWS / GCP Guides"
+  },
+  {
+    "num": 396,
+    "id": "SEC-K8S-396",
+    "title": "Kubernetes API Server Authorization Mode Node,RBAC Only",
+    "domain": "k8s",
+    "subdomain": "Control Plane Security",
+    "difficulty": "Beginner",
+    "std": "CIS K8s Benchmark §1.2.8"
+  },
+  {
+    "num": 397,
+    "id": "SEC-K8S-397",
+    "title": "Kubelet Certificate Rotation Automated Enablement Invariant",
+    "domain": "k8s",
+    "subdomain": "Node PKI",
+    "difficulty": "Intermediate",
+    "std": "CIS K8s Benchmark §4.2.11"
+  },
+  {
+    "num": 398,
+    "id": "SEC-K8S-398",
+    "title": "Admission Webhook Fail-Closed FailurePolicy: Fail Invariant",
+    "domain": "k8s",
+    "subdomain": "Admission Control",
+    "difficulty": "Advanced",
+    "std": "K8s Dynamic Admission"
+  },
+  {
+    "num": 399,
+    "id": "SEC-K8S-399",
+    "title": "Seccomp Profile RuntimeDefault Enforced in Pod SecurityContext",
+    "domain": "k8s",
+    "subdomain": "Syscall Sandboxing",
+    "difficulty": "Intermediate",
+    "std": "Kubernetes PSS"
+  },
+  {
+    "num": 400,
+    "id": "SEC-K8S-400",
+    "title": "Cluster Autoscaler Safe-To-Evict Pod Annotation Invariant",
+    "domain": "k8s",
+    "subdomain": "Autoscaling Security",
+    "difficulty": "Intermediate",
+    "std": "K8s Autoscaling"
+  },
+  {
+    "num": 401,
+    "id": "SEC-K8S-401",
+    "title": "Falco eBPF Runtime Threat Detection DaemonSet Enablement",
+    "domain": "k8s",
+    "subdomain": "Runtime Telemetry",
+    "difficulty": "Advanced",
+    "std": "CNCF Falco"
+  },
+  {
+    "num": 402,
+    "id": "SEC-CODE-001",
+    "title": "Parameterized SQL Prepared Statements Invariant",
+    "domain": "coding",
+    "subdomain": "SQL Injection & Query Construction",
+    "difficulty": "Beginner",
+    "std": "OWASP Top 10 A03:2021"
+  },
+  {
+    "num": 403,
+    "id": "SEC-CODE-002",
+    "title": "Path Traversal Canonicalization and Base Directory Invariant",
+    "domain": "coding",
+    "subdomain": "Filesystem Access & Path Traversal",
+    "difficulty": "Intermediate",
+    "std": "OWASP Top 10 A01"
+  },
+  {
+    "num": 404,
+    "id": "SEC-CODE-404",
+    "title": "Insecure Deserialization Ban (Safe JSON / Protobuf Only)",
+    "domain": "coding",
+    "subdomain": "Serialization Security",
+    "difficulty": "Intermediate",
+    "std": "OWASP Top 10 A08"
+  },
+  {
+    "num": 405,
+    "id": "SEC-CODE-405",
+    "title": "OS Command Injection Safe Process Spawning (ExecFile over Shell)",
+    "domain": "coding",
+    "subdomain": "Command Injection",
+    "difficulty": "Beginner",
+    "std": "CWE-78"
+  },
+  {
+    "num": 406,
+    "id": "SEC-CODE-406",
+    "title": "Regular Expression Denial of Service (ReDoS) Polynomial Bound",
+    "domain": "coding",
+    "subdomain": "ReDoS & Catastrophic Backtracking",
+    "difficulty": "Intermediate",
+    "std": "CWE-1333"
+  },
+  {
+    "num": 407,
+    "id": "SEC-CODE-407",
+    "title": "Time-of-Check to Time-of-Use (TOCTOU) Atomic File Locking Invariant",
+    "domain": "coding",
+    "subdomain": "Race Conditions",
+    "difficulty": "Advanced",
+    "std": "CWE-367"
+  },
+  {
+    "num": 408,
+    "id": "SEC-CODE-408",
+    "title": "Integer Overflow / Underflow Safe Arithmetic and Bounds Checking",
+    "domain": "coding",
+    "subdomain": "Arithmetic Safety",
+    "difficulty": "Intermediate",
+    "std": "CWE-190"
+  },
+  {
+    "num": 409,
+    "id": "SEC-CODE-409",
+    "title": "Memory Zeroization (memset_s / explicit_bzero) for Sensitive Keys",
+    "domain": "coding",
+    "subdomain": "Memory Hygiene",
+    "difficulty": "Advanced",
+    "std": "CWE-14"
+  },
+  {
+    "num": 410,
+    "id": "SEC-CODE-410",
+    "title": "Buffer Overflow Safe String Functions (strlcpy over strcpy)",
+    "domain": "coding",
+    "subdomain": "Memory Safety",
+    "difficulty": "Intermediate",
+    "std": "CWE-120"
+  },
+  {
+    "num": 411,
+    "id": "SEC-CODE-411",
+    "title": "Format String Vulnerability Prohibition (Never printf(user_input))",
+    "domain": "coding",
+    "subdomain": "Format String",
+    "difficulty": "Beginner",
+    "std": "CWE-134"
+  },
+  {
+    "num": 412,
+    "id": "SEC-CODE-412",
+    "title": "Exception Stack Trace Sanitization Before Client Serialization",
+    "domain": "coding",
+    "subdomain": "Information Disclosure",
+    "difficulty": "Beginner",
+    "std": "CWE-209"
+  },
+  {
+    "num": 413,
+    "id": "SEC-CODE-413",
+    "title": "XML External Entity (XXE) Safe Parser Disabling (Disallow DTD)",
+    "domain": "coding",
+    "subdomain": "XXE Injection",
+    "difficulty": "Beginner",
+    "std": "CWE-611"
+  },
+  {
+    "num": 414,
+    "id": "SEC-CODE-414",
+    "title": "Server-Side Template Injection (SSTI) Contextual Sandboxing",
+    "domain": "coding",
+    "subdomain": "Template Injection",
+    "difficulty": "Intermediate",
+    "std": "CWE-1336"
+  },
+  {
+    "num": 415,
+    "id": "SEC-CODE-415",
+    "title": "LDAP Injection Parameterized Filter Construction Invariant",
+    "domain": "coding",
+    "subdomain": "LDAP Injection",
+    "difficulty": "Intermediate",
+    "std": "CWE-90"
+  },
+  {
+    "num": 416,
+    "id": "SEC-CODE-416",
+    "title": "XPath Injection Safe Query Construction Invariant",
+    "domain": "coding",
+    "subdomain": "XPath Injection",
+    "difficulty": "Intermediate",
+    "std": "CWE-643"
+  },
+  {
+    "num": 417,
+    "id": "SEC-CODE-417",
+    "title": "Hardcoded Cryptographic Credentials Static Analysis Elimination",
+    "domain": "coding",
+    "subdomain": "Secrets Management",
+    "difficulty": "Beginner",
+    "std": "CWE-798"
+  },
+  {
+    "num": 418,
+    "id": "SEC-CODE-418",
+    "title": "Memory Freeing Double-Free and Use-After-Free Elimination",
+    "domain": "coding",
+    "subdomain": "Memory Management",
+    "difficulty": "Advanced",
+    "std": "CWE-416"
+  },
+  {
+    "num": 419,
+    "id": "SEC-CODE-419",
+    "title": "Zip Slip Archive Extraction Path Traversal Invariant",
+    "domain": "coding",
+    "subdomain": "Archive Extraction",
+    "difficulty": "Intermediate",
+    "std": "CWE-22"
+  },
+  {
+    "num": 420,
+    "id": "SEC-CODE-420",
+    "title": "Resource Exhaustion File Upload Size and Mime-Type Bound",
+    "domain": "coding",
+    "subdomain": "File Uploads",
+    "difficulty": "Beginner",
+    "std": "CWE-400"
+  },
+  {
+    "num": 421,
+    "id": "SEC-CODE-421",
+    "title": "Cryptographic Side-Channel Memory Cache Hit/Miss Elimination",
+    "domain": "coding",
+    "subdomain": "Side-Channel Resistance",
+    "difficulty": "Expert",
+    "std": "NIST SP 800-57"
+  },
+  {
+    "num": 422,
+    "id": "SEC-CODE-422",
+    "title": "Null Pointer Dereference Fail-Safe Guard Invariant",
+    "domain": "coding",
+    "subdomain": "Memory Safety",
+    "difficulty": "Beginner",
+    "std": "CWE-476"
+  },
+  {
+    "num": 423,
+    "id": "SEC-CODE-423",
+    "title": "Dependency Vulnerability Audit at CI/CD Build Gate (npm audit/pip-audit)",
+    "domain": "coding",
+    "subdomain": "Supply Chain",
+    "difficulty": "Beginner",
+    "std": "SLSA Level 2"
+  },
+  {
+    "num": 424,
+    "id": "SEC-CODE-424",
+    "title": "Safe Temporary File Creation (mkstemp with 0600 Permissions)",
+    "domain": "coding",
+    "subdomain": "Insecure Temp Files",
+    "difficulty": "Intermediate",
+    "std": "CWE-377"
+  },
+  {
+    "num": 425,
+    "id": "SEC-CODE-425",
+    "title": "Signal Handler Async-Signal-Safe Function Invariant",
+    "domain": "coding",
+    "subdomain": "Concurrency & Signals",
+    "difficulty": "Advanced",
+    "std": "POSIX.1"
+  },
+  {
+    "num": 426,
+    "id": "SEC-CODE-426",
+    "title": "Immutable Data Structure Functional Defensive Copying",
+    "domain": "coding",
+    "subdomain": "State Mutation Safety",
+    "difficulty": "Intermediate",
+    "std": "SEI CERT Java"
+  },
+  {
+    "num": 427,
+    "id": "SEC-CODE-427",
+    "title": "DNS Rebinding Time-of-Resolution Binding Invariant",
+    "domain": "coding",
+    "subdomain": "SSRF & DNS Rebinding",
+    "difficulty": "Advanced",
+    "std": "CWE-350"
+  },
+  {
+    "num": 428,
+    "id": "SEC-CODE-428",
+    "title": "Safe Reflection Type Whitelisting (Prohibit Arbitrary Instantiation)",
+    "domain": "coding",
+    "subdomain": "Reflection Security",
+    "difficulty": "Intermediate",
+    "std": "CWE-470"
+  },
+  {
+    "num": 429,
+    "id": "SEC-CODE-429",
+    "title": "Atomic Test-and-Set Concurrency Lock Invariant",
+    "domain": "coding",
+    "subdomain": "Concurrency & Deadlocks",
+    "difficulty": "Intermediate",
+    "std": "CWE-362"
+  },
+  {
+    "num": 430,
+    "id": "SEC-CODE-430",
+    "title": "SQL Truncation Attack Prevention via Schema Length Bounds",
+    "domain": "coding",
+    "subdomain": "Database Schema Safety",
+    "difficulty": "Intermediate",
+    "std": "OWASP SQLi"
+  },
+  {
+    "num": 431,
+    "id": "SEC-CODE-431",
+    "title": "Floating Point Comparison Precision and NaN Guard Invariant",
+    "domain": "coding",
+    "subdomain": "Numerical Safety",
+    "difficulty": "Intermediate",
+    "std": "IEEE 754"
+  },
+  {
+    "num": 432,
+    "id": "SEC-CODE-432",
+    "title": "Thread-Local Storage Secret Leakage Cleanup Invariant",
+    "domain": "coding",
+    "subdomain": "Thread Safety",
+    "difficulty": "Intermediate",
+    "std": "SEI CERT"
+  },
+  {
+    "num": 433,
+    "id": "SEC-CODE-433",
+    "title": "Safe JSON Parsing with Reviver / Strict Prototype Protection",
+    "domain": "coding",
+    "subdomain": "Prototype Pollution",
+    "difficulty": "Intermediate",
+    "std": "CWE-1321"
+  },
+  {
+    "num": 434,
+    "id": "SEC-CODE-434",
+    "title": "Dynamic Code Evaluation Ban (eval() / new Function() Prohibition)",
+    "domain": "coding",
+    "subdomain": "Code Execution",
+    "difficulty": "Beginner",
+    "std": "CWE-95"
+  },
+  {
+    "num": 435,
+    "id": "SEC-CODE-435",
+    "title": "Unchecked Return Value Verification on System Calls",
+    "domain": "coding",
+    "subdomain": "Error Handling",
+    "difficulty": "Beginner",
+    "std": "CWE-252"
+  },
+  {
+    "num": 436,
+    "id": "SEC-CODE-436",
+    "title": "Strict Type Coercion Equality Enforcement (=== over ==)",
+    "domain": "coding",
+    "subdomain": "Type Safety",
+    "difficulty": "Beginner",
+    "std": "CWE-1025"
+  },
+  {
+    "num": 437,
+    "id": "SEC-CODE-437",
+    "title": "Input Length Strict Upper-Bound Sanitization (Buffer DoS Defense)",
+    "domain": "coding",
+    "subdomain": "Input Validation",
+    "difficulty": "Beginner",
+    "std": "CWE-20"
+  },
+  {
+    "num": 438,
+    "id": "SEC-CODE-438",
+    "title": "Memory Leakage Object Event Listener Unbinding Invariant",
+    "domain": "coding",
+    "subdomain": "Resource Management",
+    "difficulty": "Intermediate",
+    "std": "CWE-401"
+  },
+  {
+    "num": 439,
+    "id": "SEC-CODE-439",
+    "title": "Compiler Optimization Preservation of Cryptographic Wipes",
+    "domain": "coding",
+    "subdomain": "Dead Store Elimination",
+    "difficulty": "Advanced",
+    "std": "CWE-14"
+  },
+  {
+    "num": 440,
+    "id": "SEC-AI-001",
+    "title": "Prompt Injection Context Delimiter and Channel Segregation Invariant",
+    "domain": "ai",
+    "subdomain": "Prompt Injection & Untrusted Data",
+    "difficulty": "Intermediate",
+    "std": "OWASP Top 10 for LLM Applications LLM01:2025"
+  },
+  {
+    "num": 441,
+    "id": "SEC-AI-002",
+    "title": "Tool Call Parameter Strict Schema and Scope Enforcement",
+    "domain": "ai",
+    "subdomain": "Autonomous Agents & Function Calling",
+    "difficulty": "Intermediate",
+    "std": "OWASP Top 10 for LLM Applications LLM07:2025"
+  },
+  {
+    "num": 442,
+    "id": "SEC-AI-442",
+    "title": "RAG Retrieval Permission-Aware Vector Filtering Invariant",
+    "domain": "ai",
+    "subdomain": "RAG Architecture",
+    "difficulty": "Intermediate",
+    "std": "OWASP LLM06:2025"
+  },
+  {
+    "num": 443,
+    "id": "SEC-AI-443",
+    "title": "System Prompt Extraction and Intellectual Property Shielding",
+    "domain": "ai",
+    "subdomain": "System Prompt Defense",
+    "difficulty": "Intermediate",
+    "std": "OWASP LLM01:2025"
+  },
+  {
+    "num": 444,
+    "id": "SEC-AI-444",
+    "title": "Model Denial of Service Token and Context Window Bounding",
+    "domain": "ai",
+    "subdomain": "DoS & Resource Limits",
+    "difficulty": "Beginner",
+    "std": "OWASP LLM04:2025"
+  },
+  {
+    "num": 445,
+    "id": "SEC-AI-445",
+    "title": "Model Inversion and Training Data Extraction Rate Limiting",
+    "domain": "ai",
+    "subdomain": "Privacy & Extraction",
+    "difficulty": "Advanced",
+    "std": "NIST AI 100-1"
+  },
+  {
+    "num": 446,
+    "id": "SEC-AI-446",
+    "title": "Indirect Prompt Injection URL Scraping and Sanitization Guard",
+    "domain": "ai",
+    "subdomain": "Indirect Injection",
+    "difficulty": "Intermediate",
+    "std": "OWASP LLM01:2025"
+  },
+  {
+    "num": 447,
+    "id": "SEC-AI-447",
+    "title": "Autonomous Agent Infinite Loop Execution Step Ceiling (Steps ≤ 15)",
+    "domain": "ai",
+    "subdomain": "Agent Governance",
+    "difficulty": "Beginner",
+    "std": "OWASP LLM08:2025"
+  },
+  {
+    "num": 448,
+    "id": "SEC-AI-448",
+    "title": "LLM Output Encoding Before HTML/SQL/Command Sinks (Cross-Model XSS)",
+    "domain": "ai",
+    "subdomain": "Output Validation",
+    "difficulty": "Intermediate",
+    "std": "OWASP LLM02:2025"
+  },
+  {
+    "num": 449,
+    "id": "SEC-AI-449",
+    "title": "Training Data Poisoning Hash Verification and Anomaly Detection",
+    "domain": "ai",
+    "subdomain": "Model Supply Chain",
+    "difficulty": "Advanced",
+    "std": "OWASP LLM03:2025"
+  },
+  {
+    "num": 450,
+    "id": "SEC-AI-450",
+    "title": "PII Scrubbing and Anonymization Pipeline Before Model Ingestion",
+    "domain": "ai",
+    "subdomain": "Data Privacy",
+    "difficulty": "Beginner",
+    "std": "GDPR Article 5"
+  },
+  {
+    "num": 451,
+    "id": "SEC-AI-451",
+    "title": "Agentic Financial Transaction Human-In-The-Loop Approval Gate",
+    "domain": "ai",
+    "subdomain": "Autonomous Actions",
+    "difficulty": "Intermediate",
+    "std": "OWASP LLM07:2025"
+  },
+  {
+    "num": 452,
+    "id": "SEC-AI-452",
+    "title": "Model Hallucination Grounding and Citation Verification Invariant",
+    "domain": "ai",
+    "subdomain": "Factual Accuracy",
+    "difficulty": "Intermediate",
+    "std": "NIST AI RMF"
+  },
+  {
+    "num": 453,
+    "id": "SEC-AI-453",
+    "title": "Vector Database Tenant Partitioning and Metadata Isolation",
+    "domain": "ai",
+    "subdomain": "Vector DB Security",
+    "difficulty": "Intermediate",
+    "std": "OWASP LLM06:2025"
+  },
+  {
+    "num": 454,
+    "id": "SEC-AI-454",
+    "title": "Model Weight Integrity Cryptographic Checksum (SafeTensors Only)",
+    "domain": "ai",
+    "subdomain": "Supply Chain Security",
+    "difficulty": "Beginner",
+    "std": "HuggingFace Security"
+  },
+  {
+    "num": 455,
+    "id": "SEC-AI-455",
+    "title": "PyTorch / Pickle Model Serialization Arbitrary Code Execution Ban",
+    "domain": "ai",
+    "subdomain": "Pickle Exploitation",
+    "difficulty": "Beginner",
+    "std": "CWE-502"
+  },
+  {
+    "num": 456,
+    "id": "SEC-AI-456",
+    "title": "Agent Memory and Conversation History Context Poisoning Defense",
+    "domain": "ai",
+    "subdomain": "Memory Poisoning",
+    "difficulty": "Advanced",
+    "std": "OWASP LLM01:2025"
+  },
+  {
+    "num": 457,
+    "id": "SEC-AI-457",
+    "title": "Adversarial Perturbation / Evasion Robustness Benchmark Invariant",
+    "domain": "ai",
+    "subdomain": "Adversarial ML",
+    "difficulty": "Advanced",
+    "std": "NIST AI 100-1"
+  },
+  {
+    "num": 458,
+    "id": "SEC-AI-458",
+    "title": "LLM Response Schema Strict JSON Schema Validation Invariant",
+    "domain": "ai",
+    "subdomain": "Structured Outputs",
+    "difficulty": "Beginner",
+    "std": "OpenAI / Gemini SDK Specs"
+  },
+  {
+    "num": 459,
+    "id": "SEC-AI-459",
+    "title": "Model Watermarking and Provenance Attribution Invariant",
+    "domain": "ai",
+    "subdomain": "Content Provenance",
+    "difficulty": "Intermediate",
+    "std": "C2PA Standards"
+  },
+  {
+    "num": 460,
+    "id": "SEC-AI-460",
+    "title": "Multi-Agent Communication Verification and Identity Mutual TLS",
+    "domain": "ai",
+    "subdomain": "Multi-Agent Security",
+    "difficulty": "Advanced",
+    "std": "NIST SP 800-204"
+  },
+  {
+    "num": 461,
+    "id": "SEC-AI-461",
+    "title": "LLM Cost and Budget Quota per Tenant (Denial of Wallet Defense)",
+    "domain": "ai",
+    "subdomain": "Resource Management",
+    "difficulty": "Beginner",
+    "std": "OWASP LLM04:2025"
+  },
+  {
+    "num": 462,
+    "id": "SEC-AI-462",
+    "title": "Model API Key Storage and Cloud Secret Manager KMS Invariant",
+    "domain": "ai",
+    "subdomain": "Credential Security",
+    "difficulty": "Beginner",
+    "std": "CWE-798"
+  },
+  {
+    "num": 463,
+    "id": "SEC-AI-463",
+    "title": "Zero-Retention Agreement Verification for Enterprise LLM Vendors",
+    "domain": "ai",
+    "subdomain": "Data Privacy",
+    "difficulty": "Intermediate",
+    "std": "SOC 2 Trust Criteria"
+  },
+  {
+    "num": 464,
+    "id": "SEC-AI-464",
+    "title": "Embedding Inversion and Semantic Reconstruction Defense",
+    "domain": "ai",
+    "subdomain": "Vector Security",
+    "difficulty": "Advanced",
+    "std": "NIST AI 100-1"
+  },
+  {
+    "num": 465,
+    "id": "SEC-AI-465",
+    "title": "Automated Red-Teaming Continuous CI/CD Evaluation Invariant",
+    "domain": "ai",
+    "subdomain": "Continuous Testing",
+    "difficulty": "Intermediate",
+    "std": "NIST AI RMF"
+  },
+  {
+    "num": 466,
+    "id": "SEC-AI-466",
+    "title": "Autonomous Web Surfing Headless Browser Sandbox Lockdown",
+    "domain": "ai",
+    "subdomain": "Agent Browsing",
+    "difficulty": "Advanced",
+    "std": "OWASP LLM07:2025"
+  },
+  {
+    "num": 467,
+    "id": "SEC-AI-467",
+    "title": "Model Quantization Weight Drift and Accuracy Delta Bound (Δ < 2%)",
+    "domain": "ai",
+    "subdomain": "Model Optimization",
+    "difficulty": "Advanced",
+    "std": "IEEE Software"
+  },
+  {
+    "num": 468,
+    "id": "SEC-AI-468",
+    "title": "Fine-Tuning Dataset Attribution and Provenance Verification",
+    "domain": "ai",
+    "subdomain": "Data Lineage",
+    "difficulty": "Intermediate",
+    "std": "SLSA Framework"
+  },
+  {
+    "num": 469,
+    "id": "SEC-AI-469",
+    "title": "LLM Toxicity and Bias Guardrail Pre-Output Filter Invariant",
+    "domain": "ai",
+    "subdomain": "Responsible AI",
+    "difficulty": "Beginner",
+    "std": "NIST AI RMF"
+  },
+  {
+    "num": 470,
+    "id": "SEC-AI-470",
+    "title": "Federated Learning Differential Privacy Noise Addition Bound",
+    "domain": "ai",
+    "subdomain": "Federated ML",
+    "difficulty": "Expert",
+    "std": "Differential Privacy Specs"
+  },
+  {
+    "num": 471,
+    "id": "SEC-AI-471",
+    "title": "Model Inference Hardware Enclave (Confidential Computing / TEE)",
+    "domain": "ai",
+    "subdomain": "Confidential AI",
+    "difficulty": "Expert",
+    "std": "Confidential Computing Consortium"
+  },
+  {
+    "num": 472,
+    "id": "SEC-AI-472",
+    "title": "Agent Tool Invocation Rate Throttling and Blast Radius Cap",
+    "domain": "ai",
+    "subdomain": "Agent Resilience",
+    "difficulty": "Intermediate",
+    "std": "OWASP LLM07:2025"
+  },
+  {
+    "num": 473,
+    "id": "SEC-AI-473",
+    "title": "Cross-Tenant Cache Collision in LLM Semantic Caching Invariant",
+    "domain": "ai",
+    "subdomain": "Cache Security",
+    "difficulty": "Intermediate",
+    "std": "OWASP Top 10"
+  },
+  {
+    "num": 474,
+    "id": "SEC-AI-474",
+    "title": "Speech-to-Text Audio Injection Ultrasonic Frequency Filter",
+    "domain": "ai",
+    "subdomain": "Audio AI Security",
+    "difficulty": "Advanced",
+    "std": "IEEE S&P"
+  },
+  {
+    "num": 475,
+    "id": "SEC-AI-475",
+    "title": "Agent Task Plan Reflection and Self-Verification Loop Invariant",
+    "domain": "ai",
+    "subdomain": "Agent Alignment",
+    "difficulty": "Advanced",
+    "std": "NIST AI RMF"
+  },
+  {
+    "num": 476,
+    "id": "SEC-SC-001",
+    "title": "Checks-Effects-Interactions Pattern (Anti-Reentrancy) Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "Reentrancy & State Transitions",
+    "difficulty": "Intermediate",
+    "std": "SWC-107"
+  },
+  {
+    "num": 477,
+    "id": "SEC-SC-002",
+    "title": "Flash Loan Resistant Time-Weighted Average Price (TWAP) Oracle Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "Oracle Manipulation & Flash Loans",
+    "difficulty": "Advanced",
+    "std": "SWC-115"
+  },
+  {
+    "num": 478,
+    "id": "SEC-SC-478",
+    "title": "Pull Over Push Payment Pattern Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "Denial of Service",
+    "difficulty": "Beginner",
+    "std": "SWC-113"
+  },
+  {
+    "num": 479,
+    "id": "SEC-SC-479",
+    "title": "EIP-712 Structured Signature Domain Separator and Nonce Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "Signature Replay Defense",
+    "difficulty": "Intermediate",
+    "std": "EIP-712"
+  },
+  {
+    "num": 480,
+    "id": "SEC-SC-480",
+    "title": "Solidity 0.8+ Arithmetic Overflow Protection and Unchecked Block Bounds",
+    "domain": "smartcontracts",
+    "subdomain": "Arithmetic Safety",
+    "difficulty": "Beginner",
+    "std": "SWC-101"
+  },
+  {
+    "num": 481,
+    "id": "SEC-SC-481",
+    "title": "Access Control (Ownable2Step / AccessControl) Two-Step Transfer",
+    "domain": "smartcontracts",
+    "subdomain": "Access Control",
+    "difficulty": "Beginner",
+    "std": "OpenZeppelin Contracts"
+  },
+  {
+    "num": 482,
+    "id": "SEC-SC-482",
+    "title": "Upgradeable Proxy Storage Slot Collision Elimination (EIP-1967)",
+    "domain": "smartcontracts",
+    "subdomain": "Proxy Security",
+    "difficulty": "Advanced",
+    "std": "EIP-1967"
+  },
+  {
+    "num": 483,
+    "id": "SEC-SC-483",
+    "title": "Front-Running / MEV Slippage Limit and Deadline Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "MEV & Slippage",
+    "difficulty": "Intermediate",
+    "std": "Uniswap Security"
+  },
+  {
+    "num": 484,
+    "id": "SEC-SC-484",
+    "title": "Selfdestruct / Forced Ether Balance Assumption Elimination",
+    "domain": "smartcontracts",
+    "subdomain": "Invariable Balance Fallacy",
+    "difficulty": "Intermediate",
+    "std": "SWC-132"
+  },
+  {
+    "num": 485,
+    "id": "SEC-SC-485",
+    "title": "tx.origin Phishing Prohibition (Always Use msg.sender)",
+    "domain": "smartcontracts",
+    "subdomain": "Authentication Flaws",
+    "difficulty": "Beginner",
+    "std": "SWC-115"
+  },
+  {
+    "num": 486,
+    "id": "SEC-SC-486",
+    "title": "Block Timestamp Manipulation Tolerance Ceiling (Tolerate ≤ 15s Drift)",
+    "domain": "smartcontracts",
+    "subdomain": "Miner Manipulation",
+    "difficulty": "Beginner",
+    "std": "SWC-116"
+  },
+  {
+    "num": 487,
+    "id": "SEC-SC-487",
+    "title": "ERC-20 SafeERC20 Transfer (Handling Non-Standard Return Values)",
+    "domain": "smartcontracts",
+    "subdomain": "Token Standards",
+    "difficulty": "Beginner",
+    "std": "OpenZeppelin SafeERC20"
+  },
+  {
+    "num": 488,
+    "id": "SEC-SC-488",
+    "title": "Uninitialized Storage Pointer Prevention Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "Storage Layout",
+    "difficulty": "Intermediate",
+    "std": "SWC-109"
+  },
+  {
+    "num": 489,
+    "id": "SEC-SC-489",
+    "title": "Delegatecall to Untrusted Target Contract Hard Prohibition",
+    "domain": "smartcontracts",
+    "subdomain": "Proxy & Code Execution",
+    "difficulty": "Advanced",
+    "std": "SWC-112"
+  },
+  {
+    "num": 490,
+    "id": "SEC-SC-490",
+    "title": "Signature Malleability ecrecover s-value Upper-Bound (s ≤ secp256k1n/2)",
+    "domain": "smartcontracts",
+    "subdomain": "Cryptographic Signatures",
+    "difficulty": "Advanced",
+    "std": "EIP-2"
+  },
+  {
+    "num": 491,
+    "id": "SEC-SC-491",
+    "title": "Gas Griefing External Call Forwarding Gas Cap (gas: 10000)",
+    "domain": "smartcontracts",
+    "subdomain": "DoS with Gas",
+    "difficulty": "Intermediate",
+    "std": "SWC-126"
+  },
+  {
+    "num": 492,
+    "id": "SEC-SC-492",
+    "title": "ERC-721 / ERC-1155 Reentrancy via onERC721Received Hook Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "NFT Reentrancy",
+    "difficulty": "Intermediate",
+    "std": "EIP-721"
+  },
+  {
+    "num": 493,
+    "id": "SEC-SC-493",
+    "title": "Emergency Circuit Breaker (Pausable) Multi-Sig Admin Gate",
+    "domain": "smartcontracts",
+    "subdomain": "Incident Response",
+    "difficulty": "Beginner",
+    "std": "OpenZeppelin Pausable"
+  },
+  {
+    "num": 494,
+    "id": "SEC-SC-494",
+    "title": "Strict Function Visibility Declaration (No Default Public)",
+    "domain": "smartcontracts",
+    "subdomain": "Function Visibility",
+    "difficulty": "Beginner",
+    "std": "SWC-100"
+  },
+  {
+    "num": 495,
+    "id": "SEC-SC-495",
+    "title": "Deterministic Randomness on Blockchain Prohibition (Use Chainlink VRF)",
+    "domain": "smartcontracts",
+    "subdomain": "Randomness Flaws",
+    "difficulty": "Beginner",
+    "std": "SWC-120"
+  },
+  {
+    "num": 496,
+    "id": "SEC-SC-496",
+    "title": "Storage Array Deletion Gas Limit Exceeded Denial of Service",
+    "domain": "smartcontracts",
+    "subdomain": "Gas Limit DoS",
+    "difficulty": "Intermediate",
+    "std": "SWC-128"
+  },
+  {
+    "num": 497,
+    "id": "SEC-SC-497",
+    "title": "Timelock Controller Delay Minimum Threshold (Delay ≥ 48h for Upgrades)",
+    "domain": "smartcontracts",
+    "subdomain": "Governance Security",
+    "difficulty": "Intermediate",
+    "std": "Compound Timelock"
+  },
+  {
+    "num": 498,
+    "id": "SEC-SC-498",
+    "title": "ERC-4626 Token Vault Inflation Attack Virtual Share Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "DeFi Vault Security",
+    "difficulty": "Advanced",
+    "std": "EIP-4626"
+  },
+  {
+    "num": 499,
+    "id": "SEC-SC-499",
+    "title": "L2 Sequencer Downtime Grace Period for Optimistic Rollup Oracles",
+    "domain": "smartcontracts",
+    "subdomain": "Layer 2 Security",
+    "difficulty": "Advanced",
+    "std": "Arbitrum / Optimism Specs"
+  },
+  {
+    "num": 500,
+    "id": "SEC-SC-500",
+    "title": "Cross-Chain Message Bridge Replay and Merkle Root Proof Verification",
+    "domain": "smartcontracts",
+    "subdomain": "Bridge Security",
+    "difficulty": "Expert",
+    "std": "Wormhole Post-Mortem"
+  },
+  {
+    "num": 501,
+    "id": "SEC-SC-501",
+    "title": "Diamond Pattern (EIP-2535) Function Selector Collision Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "Multi-Facet Proxies",
+    "difficulty": "Expert",
+    "std": "EIP-2535"
+  },
+  {
+    "num": 502,
+    "id": "SEC-SC-502",
+    "title": "ERC-20 Approve Race Condition (Increase/Decrease Allowance Invariant)",
+    "domain": "smartcontracts",
+    "subdomain": "Token Approvals",
+    "difficulty": "Beginner",
+    "std": "SWC-114"
+  },
+  {
+    "num": 503,
+    "id": "SEC-SC-503",
+    "title": "Governance Vote Flash Loan Defense (Historical Snapshot Block Check)",
+    "domain": "smartcontracts",
+    "subdomain": "DAO Governance",
+    "difficulty": "Intermediate",
+    "std": "OpenZeppelin Governor"
+  },
+  {
+    "num": 504,
+    "id": "SEC-SC-504",
+    "title": "Solidity Inline Assembly Memory Pointer (mload 0x40) Preservation",
+    "domain": "smartcontracts",
+    "subdomain": "Assembly & Yul",
+    "difficulty": "Expert",
+    "std": "Solidity Yul Docs"
+  },
+  {
+    "num": 505,
+    "id": "SEC-SC-505",
+    "title": "Zero Address Transfer and Minting Validation Invariant (address(0) Ban)",
+    "domain": "smartcontracts",
+    "subdomain": "Address Validation",
+    "difficulty": "Beginner",
+    "std": "OpenZeppelin Best Practices"
+  },
+  {
+    "num": 506,
+    "id": "SEC-SC-506",
+    "title": "Permit (EIP-2612) Front-Running Resilience Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "Gasless Approvals",
+    "difficulty": "Intermediate",
+    "std": "EIP-2612"
+  },
+  {
+    "num": 507,
+    "id": "SEC-SC-507",
+    "title": "Proxy Implementation Constructor Disabling (initialize() Only)",
+    "domain": "smartcontracts",
+    "subdomain": "Proxy Initialization",
+    "difficulty": "Intermediate",
+    "std": "OpenZeppelin Initializable"
+  },
+  {
+    "num": 508,
+    "id": "SEC-SC-508",
+    "title": "Fallback / Receive Function Pure Ether Acceptance Invariant",
+    "domain": "smartcontracts",
+    "subdomain": "Ether Transfers",
+    "difficulty": "Beginner",
+    "std": "Solidity Docs"
+  },
+  {
+    "num": 509,
+    "id": "SEC-SC-509",
+    "title": "Invariant Testing with Echidna / Foundry Fuzzing CI Gate",
+    "domain": "smartcontracts",
+    "subdomain": "Fuzzing & Formal Verification",
+    "difficulty": "Advanced",
+    "std": "Trail of Bits Guidelines"
+  },
+  {
+    "num": 510,
+    "id": "SEC-SC-510",
+    "title": "ERC-777 Reentrancy via tokensToSend Hook Ban",
+    "domain": "smartcontracts",
+    "subdomain": "Token Standards",
+    "difficulty": "Intermediate",
+    "std": "ConsenSys Best Practices"
+  },
+  {
+    "num": 511,
+    "id": "SEC-SC-511",
+    "title": "Protocol Treasury Multi-Sig Safe Threshold Minimum (M-of-N ≥ 3-of-5)",
+    "domain": "smartcontracts",
+    "subdomain": "Treasury Governance",
+    "difficulty": "Intermediate",
+    "std": "Safe (Gnosis) Guidelines"
+  }
+]
